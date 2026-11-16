@@ -44,6 +44,7 @@
   .topbar{background:var(--ink);color:#EDE7DB;text-align:center;font-size:.62rem;
           letter-spacing:.16em;padding:9px 14px}
   .topbar .dot{color:#6E6A60;margin:0 8px}
+  .topbar .opt{display:none}
 
   /* ---------- header ---------- */
   .site{position:sticky;top:0;z-index:50;background:rgba(251,250,246,.94);
@@ -54,7 +55,7 @@
   .brand{font-family:var(--serif);font-size:1.15rem;letter-spacing:.44em;text-indent:.44em;
          font-weight:400;white-space:nowrap}
   .brand-wrap{flex:1;display:flex;justify-content:center}
-  .burger{width:34px;height:34px;border:0;background:none;padding:7px 6px;display:grid;
+  .burger{width:48px;height:34px;border:0;background:none;padding:7px 6px;display:grid;
           align-content:center;gap:4px;cursor:pointer;order:-1}
   .burger span{display:block;height:1px;background:var(--ink);width:20px;transition:transform .25s,opacity .25s}
   .burger span:nth-child(3){width:13px}
@@ -62,7 +63,7 @@
   .menu-open .burger span:nth-child(2){opacity:0}
   .menu-open .burger span:nth-child(3){width:20px;transform:translateY(-5px) rotate(-45deg)}
   .bag{font-size:.66rem;letter-spacing:.16em;color:var(--ink-soft);white-space:nowrap}
-  .header-bag{order:3}
+  .header-bag{order:3;width:48px;text-align:right}
   nav.primary{display:none}
   .header-right{display:none}
   .mobile-nav{display:none;border-top:1px solid var(--line);background:var(--paper)}
@@ -89,6 +90,7 @@
              font-size:.62rem;letter-spacing:.24em}
 
   /* ---------- strip ---------- */
+  .strip-extra{display:none}
   .strip{background:var(--sand);color:#5B5446;text-align:center;font-size:.62rem;
          letter-spacing:.28em;padding:13px 10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 
@@ -220,6 +222,8 @@
   /* ---------- tablet ---------- */
   @media (min-width:760px){
     .wrap{padding:0 40px}
+    .topbar .opt{display:inline}
+    .strip-extra{display:inline}
     .hero-in{padding:0 40px 56px}
     .hero .num{right:40px;top:26px}
     .cards{grid-template-columns:repeat(3,1fr);gap:34px 26px}
@@ -260,6 +264,7 @@
     .story-body{padding:76px 88px 72px;display:flex;flex-direction:column;justify-content:center}
     .quote{margin-top:96px;min-height:620px;padding:0}
     .quote blockquote{font-size:2.6rem}
+    .grid4{grid-template-columns:repeat(4,1fr);gap:34px 26px}
     .duo{grid-template-columns:1fr 1fr;gap:22px}
     .panel{padding-bottom:63.4%}
     .p-body{left:34px;bottom:30px}
@@ -275,7 +280,7 @@
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
 
-<div class="topbar">50,000원 이상 무료배송 <span class="dot">·</span> 평일 오후 2시 이전 결제 시 당일 출고 <span class="dot">·</span> 신규 회원 10% 쿠폰</div>
+<div class="topbar">50,000원 이상 무료배송<span class="opt"> <span class="dot">·</span> 평일 오후 2시 이전 결제 시 당일 출고 <span class="dot">·</span></span> 신규 회원 10% 쿠폰</div>
 
 <header class="site" id="site">
   <div class="wrap bar">
@@ -318,7 +323,7 @@
     </div>
   </section>
 
-  <div class="strip">체로 거른, 오래 쓰는 물건 &nbsp;—&nbsp; SIFT SELECT SHOP &nbsp;—&nbsp; LIVING &amp; KITCHEN</div>
+  <div class="strip">체로 거른, 오래 쓰는 물건<span class="strip-extra"> &nbsp;—&nbsp; SIFT SELECT SHOP &nbsp;—&nbsp; LIVING &amp; KITCHEN</span></div>
 
   <section class="section" id="pick">
     <div class="wrap">

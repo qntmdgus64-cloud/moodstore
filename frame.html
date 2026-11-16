@@ -6,7 +6,7 @@
 <title>viewport check</title>
 <style>
   body{margin:0;background:#ddd;font-family:system-ui,sans-serif}
-  .row{display:flex;gap:16px;padding:16px;align-items:flex-start}
+  .row{display:flex;gap:14px;padding:14px;align-items:flex-start}
   .col{background:#fff}
   .cap{font-size:11px;padding:4px 6px;color:#444}
   iframe{border:0;display:block;background:#fff}
@@ -14,14 +14,14 @@
 </head>
 <body>
 <div class="row">
-  <div class="col">
-    <div class="cap">390 (mobile)</div>
-    <iframe src="index.html" width="390" height="2200" title="mobile"></iframe>
-  </div>
-  <div class="col">
-    <div class="cap">768 (tablet)</div>
-    <iframe src="index.html" width="768" height="2200" title="tablet"></iframe>
-  </div>
+  <div class="col"><div class="cap">390 · #pick</div><iframe src="index.html#pick" width="390" height="860" title="m1"></iframe></div>
+  <div class="col"><div class="cap">390 · #story</div><iframe src="index.html#story" width="390" height="860" title="m2"></iframe></div>
+  <div class="col"><div class="cap">390 · #new</div><iframe src="index.html#new" width="390" height="860" title="m3"></iframe></div>
+</div>
+<div class="row">
+  <div class="col"><div class="cap">390 · #collection</div><iframe src="index.html#collection" width="390" height="860" title="m4"></iframe></div>
+  <div class="col"><div class="cap">390 · #journal</div><iframe src="index.html#journal" width="390" height="860" title="m5"></iframe></div>
+  <div class="col"><div class="cap">768 · #pick</div><iframe src="index.html#pick" width="768" height="860" title="t1"></iframe></div>
 </div>
 </body>
 </html>
