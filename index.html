@@ -228,8 +228,9 @@
   .ov.on{display:block}
   .ov-bg{position:absolute;inset:0;background:rgba(18,16,12,.62)}
   .ov.on .ov-bg{animation:fadeIn .3s ease both}
-  .ov-shell{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center}
-  .ov-panel{position:relative;display:flex;flex-direction:column;width:100%;
+  .ov-shell{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;
+    pointer-events:none}
+  .ov-panel{position:relative;pointer-events:auto;display:flex;flex-direction:column;width:100%;
     max-height:94vh;max-height:94dvh;background:var(--paper);border-radius:14px 14px 0 0;overflow:hidden;
     box-shadow:0 -10px 44px rgba(18,16,12,.28)}
   .ov.on .ov-panel{animation:panelIn .36s cubic-bezier(.22,.8,.24,1) both}
