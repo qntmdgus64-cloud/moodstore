@@ -1,6 +1,6 @@
-# SIFT — 브랜드 랜딩 페이지 (GitHub Pages)
+# HARU PICK — 브랜드 랜딩 페이지 (GitHub Pages)
 
-29CM·지그재그 편집숍 문법을 벤치마킹한 **SIFT 리빙·주방 편집숍** 반응형 원페이지입니다.
+29CM·지그재그 편집숍 문법을 벤치마킹한 **HARU PICK 리빙·주방 편집숍** 반응형 원페이지입니다.
 
 - 라이브: https://qntmdgus64-cloud.github.io/moodstore/
 - 구성: `index.html` (단일 파일, CSS·JS 인라인) + `assets/` (이미지 13개, 약 1.3MB)
