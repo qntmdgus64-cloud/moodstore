@@ -189,25 +189,13 @@
   .jex{font-size:.76rem;line-height:1.9;color:var(--sub);margin-top:8px}
 
   /* ---------- instagram ---------- */
-  .insta{padding:56px 0 0;text-align:center}
+  .insta{padding:56px 0 72px;text-align:center}
   .insta .t{font-family:var(--serif);font-size:1.1rem;margin-top:10px}
   .insta .s{font-size:.72rem;color:var(--muted);margin-top:8px}
   .igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
   .ig{position:relative;padding-bottom:100%;overflow:hidden;background:#fff}
   .ig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .25s}
   .ig:hover img{opacity:.85}
-
-  /* ---------- newsletter ---------- */
-  .news{margin-top:56px;background:var(--sand);text-align:center;padding:46px 22px}
-  .news .t{font-family:var(--serif);font-size:1.15rem;margin-top:12px}
-  .news .s{font-size:.76rem;color:#6E6657;margin-top:12px;line-height:1.9}
-  form.news-form{display:grid;gap:8px;max-width:420px;margin:24px auto 0}
-  .news input{height:44px;border:1px solid #D6CDBC;background:var(--paper);padding:0 14px;
-              font-family:inherit;font-size:.8rem;color:var(--ink);border-radius:0}
-  .news button{height:44px;border:0;background:var(--ink);color:#F8F3E9;font-family:inherit;
-               font-size:.72rem;letter-spacing:.18em;cursor:pointer;transition:opacity .2s}
-  .news button:hover{opacity:.85}
-  .news .fine{font-size:.62rem;color:var(--muted);margin-top:14px}
 
   /* ---------- footer ---------- */
   footer{background:var(--ink);color:#B7B0A2;padding:48px 0 34px;font-size:.76rem}
@@ -240,7 +228,6 @@
     .grid4{grid-template-columns:repeat(2,1fr)}
     .journal{grid-template-columns:repeat(2,1fr);gap:0 26px}
     .igrid{grid-template-columns:repeat(6,1fr)}
-    form.news-form{grid-template-columns:1fr 130px;gap:8px}
     .f-grid{grid-template-columns:2fr 1fr 1fr 1.4fr}
     .story-media{min-height:420px}
   }
@@ -276,18 +263,16 @@
     .panel{padding-bottom:63.4%}
     .p-body{left:34px;bottom:30px}
     .journal{grid-template-columns:repeat(3,1fr);gap:0 34px}
-    .news{margin-top:88px;padding:60px 20px}
-    .news .t{font-size:1.7rem}
     .igrid{gap:14px}
     footer{padding:62px 0 40px}
-    .insta{padding-top:78px}
+    .insta{padding:78px 0 96px}
   }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
 
-<div class="topbar">50,000원 이상 무료배송<span class="opt"> <span class="dot">·</span> 평일 오후 2시 이전 결제 시 당일 출고 <span class="dot">·</span></span> 신규 회원 10% 쿠폰</div>
+<div class="topbar">전 상품 무료배송<span class="opt"> <span class="dot">·</span> 평일 오후 2시 이전 결제 시 당일 출고 <span class="dot">·</span></span> 신규 회원 10% 쿠폰</div>
 
 <header class="site" id="site">
   <div class="wrap bar">
@@ -569,18 +554,6 @@
     </div>
   </section>
 
-  <section class="news">
-    <div class="wrap">
-      <div class="eyebrow">Newsletter</div>
-      <div class="t">새로운 물건을 가장 먼저</div>
-      <div class="s">한 달에 두 번, 새로 들어온 물건과 편집숍 소식만 조용히 보내드립니다.</div>
-      <form class="news-form" id="newsForm">
-        <input type="email" name="email" required placeholder="이메일 주소를 입력해 주세요" aria-label="이메일 주소">
-        <button type="submit">구독하기</button>
-      </form>
-      <div class="fine">구독은 언제든 해지할 수 있으며, 수집한 이메일은 소식 발송에만 사용합니다.</div>
-    </div>
-  </section>
 </main>
 
 <footer>
@@ -644,17 +617,6 @@
     }
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
-
-    var form = document.getElementById('newsForm');
-    if (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var email = form.querySelector('input[name="email"]').value || '';
-        var subject = encodeURIComponent('[SIFT] 뉴스레터 구독 신청');
-        var body = encodeURIComponent('구독할 이메일: ' + email);
-        window.location.href = 'mailto:wellmade9397@naver.com?subject=' + subject + '&body=' + body;
-      });
-    }
   })();
 </script>
 </body>
