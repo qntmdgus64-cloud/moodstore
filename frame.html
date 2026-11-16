@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>viewport check</title>
+<style>
+  body{margin:0;background:#ddd;font-family:system-ui,sans-serif}
+  .row{display:flex;gap:16px;padding:16px;align-items:flex-start}
+  .col{background:#fff}
+  .cap{font-size:11px;padding:4px 6px;color:#444}
+  iframe{border:0;display:block;background:#fff}
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="col">
+    <div class="cap">390 (mobile)</div>
+    <iframe src="index.html" width="390" height="2200" title="mobile"></iframe>
+  </div>
+  <div class="col">
+    <div class="cap">768 (tablet)</div>
+    <iframe src="index.html" width="768" height="2200" title="tablet"></iframe>
+  </div>
+</div>
+</body>
+</html>

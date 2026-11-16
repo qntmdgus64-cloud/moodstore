@@ -3,19 +3,645 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>moodstore</title>
+<title>SIFT — 체로 거른, 오래 쓰는 물건 | 리빙·주방 편집숍</title>
+<meta name="description" content="SIFT는 유행보다 쓰임을 먼저 봅니다. 다담 도자기와 올비아 조리도구까지, 매일 손이 가는 그릇과 주방 도구를 골라 소개합니다.">
+<meta name="theme-color" content="#17150F">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SIFT">
+<meta property="og:title" content="SIFT — 매일의 식탁을 조금 더 다정하게">
+<meta property="og:description" content="체로 거른, 오래 쓰는 물건. 리빙·주방 편집숍 SIFT의 2026 겨울 식탁 컬렉션.">
+<meta property="og:image" content="https://qntmdgus64-cloud.github.io/moodstore/assets/og.jpg">
+<meta property="og:url" content="https://qntmdgus64-cloud.github.io/moodstore/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2317150F'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='30' fill='%23F7F2E8' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-  html,body{height:100%;margin:0}
-  body{display:grid;place-items:center;font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif;background:#fafafa;color:#222}
-  .box{text-align:center;padding:24px}
-  h1{font-size:20px;font-weight:600;margin:0 0 8px}
-  p{font-size:14px;color:#666;margin:0}
+  :root{
+    --ink:#17150F; --ink-soft:#35322B; --sub:#5C564A; --muted:#8C8578;
+    --line:#E5DFD3; --paper:#FBFAF6; --sand:#EFE8DB; --brass:#8B7355;
+    --serif:'Noto Serif KR','Nanum Myeongjo','Apple SD Gothic Neo',serif;
+    --sans:'Noto Sans KR','Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+       font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 22px}
+  .eyebrow{font-size:.66rem;letter-spacing:.30em;color:var(--muted);text-transform:uppercase}
+  .link{display:inline-block;font-size:.72rem;letter-spacing:.14em;border-bottom:1px solid var(--ink);
+        padding-bottom:4px;transition:opacity .2s}
+  .link:hover{opacity:.55}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:10px 16px;z-index:99}
+  .skip:focus{left:8px;top:8px}
+  :focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+  .cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+  /* ---------- top bar ---------- */
+  .topbar{background:var(--ink);color:#EDE7DB;text-align:center;font-size:.62rem;
+          letter-spacing:.16em;padding:9px 14px}
+  .topbar .dot{color:#6E6A60;margin:0 8px}
+
+  /* ---------- header ---------- */
+  .site{position:sticky;top:0;z-index:50;background:rgba(251,250,246,.94);
+        backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line);
+        transition:box-shadow .25s ease}
+  .site.scrolled{box-shadow:0 1px 18px rgba(23,21,15,.06)}
+  .site .bar{display:flex;align-items:center;height:62px;gap:12px}
+  .brand{font-family:var(--serif);font-size:1.15rem;letter-spacing:.44em;text-indent:.44em;
+         font-weight:400;white-space:nowrap}
+  .brand-wrap{flex:1;display:flex;justify-content:center}
+  .burger{width:34px;height:34px;border:0;background:none;padding:7px 6px;display:grid;
+          align-content:center;gap:4px;cursor:pointer;order:-1}
+  .burger span{display:block;height:1px;background:var(--ink);width:20px;transition:transform .25s,opacity .25s}
+  .burger span:nth-child(3){width:13px}
+  .menu-open .burger span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+  .menu-open .burger span:nth-child(2){opacity:0}
+  .menu-open .burger span:nth-child(3){width:20px;transform:translateY(-5px) rotate(-45deg)}
+  .bag{font-size:.66rem;letter-spacing:.16em;color:var(--ink-soft);white-space:nowrap}
+  .header-bag{order:3}
+  nav.primary{display:none}
+  .header-right{display:none}
+  .mobile-nav{display:none;border-top:1px solid var(--line);background:var(--paper)}
+  .menu-open .mobile-nav{display:block}
+  .mobile-nav a{display:block;padding:15px 22px;border-bottom:1px solid var(--line);
+                font-size:.8rem;letter-spacing:.14em}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;isolation:isolate;overflow:hidden;background:#221F19}
+  .hero>picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(0deg,rgba(17,15,12,.88) 0%,rgba(17,15,12,.42) 46%,rgba(17,15,12,.10) 100%)}
+  .hero-in{position:relative;min-height:clamp(480px,72vh,720px);display:flex;align-items:flex-end;
+           padding:0 22px 44px;max-width:1280px;margin:0 auto}
+  .hero-copy{max-width:520px;color:#F8F3E9}
+  .hero .eyebrow{color:#CFC0A6}
+  .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(1.85rem,6.4vw,3.6rem);
+           line-height:1.42;letter-spacing:-.01em;margin:16px 0 0;color:#FBF7EE}
+  .hero p{font-size:clamp(.8rem,2.6vw,.92rem);line-height:1.95;color:#D9D0BE;margin:16px 0 0}
+  .btn{display:inline-block;margin-top:26px;padding:13px 26px;border:1px solid rgba(248,243,233,.55);
+       color:#F8F3E9;font-size:.7rem;letter-spacing:.2em;transition:background .25s,color .25s}
+  .btn:hover{background:#F8F3E9;color:var(--ink)}
+  .hero .num{position:absolute;right:22px;top:20px;color:rgba(248,243,233,.8);
+             font-size:.62rem;letter-spacing:.24em}
+
+  /* ---------- strip ---------- */
+  .strip{background:var(--sand);color:#5B5446;text-align:center;font-size:.62rem;
+         letter-spacing:.28em;padding:13px 10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+
+  /* ---------- section head ---------- */
+  .section{padding:56px 0 0}
+  .sec-head{display:grid;gap:18px;margin-bottom:26px}
+  .statement{font-family:var(--serif);font-size:1.35rem;line-height:1.55;
+             margin:12px 0 0;letter-spacing:-.01em}
+  .sec-head p{font-size:.84rem;line-height:2;color:var(--sub);margin:0}
+  .sec-head .link{margin-top:14px}
+
+  /* ---------- product cards ---------- */
+  .cards{display:grid;gap:26px 20px}
+  .card{display:flex;flex-direction:column}
+  .thumb{position:relative;width:100%;padding-bottom:100%;background:#fff;overflow:hidden}
+  .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:50% 50%}
+  .badge{position:absolute;left:12px;top:12px;background:var(--ink);color:#F8F3E9;
+         font-size:.56rem;letter-spacing:.18em;padding:5px 8px;z-index:2}
+  .wish{position:absolute;right:10px;top:10px;width:28px;height:28px;border:1px solid #DCD5C7;
+        border-radius:50%;background:rgba(255,255,255,.82);display:grid;place-items:center;
+        font-size:.8rem;line-height:1;color:#6B6455;z-index:2;cursor:pointer;
+        transition:border-color .2s,color .2s}
+  .wish:hover{border-color:var(--ink);color:var(--ink)}
+  .card-brand{margin-top:13px;font-size:.58rem;letter-spacing:.22em;color:var(--muted)}
+  .card-name{margin-top:6px;font-size:.86rem;font-weight:500;letter-spacing:-.01em}
+  .card-opt{margin-top:4px;font-size:.68rem;color:var(--muted)}
+  .card-price{margin-top:5px;font-size:.8rem}
+  .card-foot{margin-top:10px;display:flex;align-items:center;gap:6px}
+  .dot{width:7px;height:7px;border-radius:50%;border:1px solid #CFC7B8;display:inline-block}
+  .dot.w{background:#F6F3EC}.dot.s{background:#D8C4A4}.dot.b{background:#3A3733}
+  .ship{margin-left:auto;font-size:.56rem;letter-spacing:.12em;color:var(--muted)}
+
+  /* card rail (mobile) */
+  .rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+        padding:0 22px 6px;margin:0 -22px;-webkit-overflow-scrolling:touch}
+  .rail::-webkit-scrollbar{height:0}
+  .rail .card{flex:0 0 66%;max-width:262px;scroll-snap-align:start}
+
+  /* ---------- story ---------- */
+  .story{margin-top:56px;background:var(--sand)}
+  .story-media{position:relative;min-height:360px;overflow:hidden;background:#E4DACA}
+  .story-body{padding:36px 22px 44px}
+  .story h2{font-family:var(--serif);font-weight:400;font-size:1.45rem;
+            line-height:1.55;margin:12px 0 0}
+  .story p{font-size:.84rem;line-height:2.05;color:#4F4A3F;margin:14px 0 0}
+  .story-meta{margin-top:22px;font-size:.6rem;letter-spacing:.2em;color:#7C7466}
+  .story-meta span{margin-right:12px}
+  .story .link{margin-top:18px}
+  .story-shop{margin-top:34px;border-top:1px solid #D3C8B3;padding-top:16px;display:flex;align-items:center;gap:12px}
+  .ss-thumb{width:52px;height:52px;flex:0 0 52px;background:#fff;overflow:hidden;position:relative}
+  .ss-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+  .ss-k{font-size:.56rem;letter-spacing:.2em;color:var(--brass);display:block}
+  .ss-name{font-size:.76rem;margin-top:4px;display:block}
+  .ss-price{font-size:.7rem;color:#6E6657;margin-top:2px;display:block}
+  .ss-arrow{margin-left:auto;color:var(--ink)}
+
+  /* ---------- quote ---------- */
+  .quote{position:relative;isolation:isolate;overflow:hidden;margin-top:56px;display:grid;place-items:center;
+         text-align:center;padding:70px 24px;color:#F7F2E8;min-height:340px}
+  .quote img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+  .quote::after{content:"";position:absolute;inset:0;background:rgba(18,16,12,.58);z-index:-1}
+  .quote .mark{font-family:var(--serif);font-size:1.7rem;color:rgba(247,242,232,.5);line-height:1}
+  .quote blockquote{margin:8px 0 0;font-family:var(--serif);font-weight:400;
+                    font-size:1.4rem;line-height:1.7;letter-spacing:.01em}
+  .quote .sub{font-size:.76rem;line-height:1.95;color:rgba(247,242,232,.8);margin-top:16px}
+
+  /* ---------- collection panels ---------- */
+  .duo{display:grid;gap:14px}
+  .panel{position:relative;isolation:isolate;overflow:hidden;display:block;padding-bottom:66.5%;
+         color:#F8F3E9}
+  .panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
+             transition:transform .8s ease}
+  .panel:hover img{transform:scale(1.04)}
+  .panel::after{content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(0deg,rgba(17,15,12,.74) 0%,rgba(17,15,12,.06) 62%)}
+  .p-body{position:absolute;left:20px;bottom:20px}
+  .p-tag{font-size:.56rem;letter-spacing:.24em;color:rgba(248,243,233,.8)}
+  .p-title{font-family:var(--serif);font-size:1.12rem;margin-top:8px;display:block}
+  .p-sub{font-size:.68rem;color:rgba(248,243,233,.82);margin-top:6px;display:block}
+  .p-count{position:absolute;right:20px;bottom:22px;font-size:.6rem;letter-spacing:.18em;
+           color:rgba(248,243,233,.8)}
+
+  /* ---------- journal ---------- */
+  .journal{display:grid;gap:0}
+  .jcard{border-top:1.5px solid var(--ink);padding:18px 0 26px}
+  .jtag{font-size:.56rem;letter-spacing:.22em;color:var(--brass)}
+  .jtitle{font-family:var(--serif);font-size:1.06rem;line-height:1.55;margin-top:9px}
+  .jdate{font-size:.6rem;letter-spacing:.12em;color:#A9A294;margin-top:8px}
+  .jex{font-size:.76rem;line-height:1.9;color:var(--sub);margin-top:8px}
+
+  /* ---------- instagram ---------- */
+  .insta{padding:56px 0 0;text-align:center}
+  .insta .t{font-family:var(--serif);font-size:1.1rem;margin-top:10px}
+  .insta .s{font-size:.72rem;color:var(--muted);margin-top:8px}
+  .igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+  .ig{position:relative;padding-bottom:100%;overflow:hidden;background:#fff}
+  .ig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .25s}
+  .ig:hover img{opacity:.85}
+
+  /* ---------- newsletter ---------- */
+  .news{margin-top:56px;background:var(--sand);text-align:center;padding:46px 22px}
+  .news .t{font-family:var(--serif);font-size:1.15rem;margin-top:12px}
+  .news .s{font-size:.76rem;color:#6E6657;margin-top:12px;line-height:1.9}
+  form.news-form{display:grid;gap:8px;max-width:420px;margin:24px auto 0}
+  .news input{height:44px;border:1px solid #D6CDBC;background:var(--paper);padding:0 14px;
+              font-family:inherit;font-size:.8rem;color:var(--ink);border-radius:0}
+  .news button{height:44px;border:0;background:var(--ink);color:#F8F3E9;font-family:inherit;
+               font-size:.72rem;letter-spacing:.18em;cursor:pointer;transition:opacity .2s}
+  .news button:hover{opacity:.85}
+  .news .fine{font-size:.62rem;color:var(--muted);margin-top:14px}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);color:#B7B0A2;padding:48px 0 34px;font-size:.76rem}
+  .f-grid{display:grid;gap:30px}
+  .f-logo{font-family:var(--serif);font-size:1rem;letter-spacing:.44em;text-indent:.44em;color:#F3EEE4}
+  .f-say{font-size:.76rem;line-height:1.95;color:#8E887B;margin-top:14px}
+  .f-h{font-size:.58rem;letter-spacing:.24em;color:#6E6A60;margin-bottom:10px}
+  .f-list a,.f-list div{display:block;font-size:.72rem;line-height:2.05;color:#B7B0A2;transition:color .2s}
+  .f-list a:hover{color:#F3EEE4}
+  .f-rule{height:1px;background:#302D27;margin:34px 0 18px}
+  .f-legal{font-size:.6rem;line-height:1.9;color:#6E6A60}
+  .f-copy{font-size:.58rem;letter-spacing:.16em;color:#4E4A43;margin-top:12px}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition:none!important;animation:none!important}
+  }
+
+  /* ---------- tablet ---------- */
+  @media (min-width:760px){
+    .wrap{padding:0 40px}
+    .hero-in{padding:0 40px 56px}
+    .hero .num{right:40px;top:26px}
+    .cards{grid-template-columns:repeat(3,1fr);gap:34px 26px}
+    .rail{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;overflow:visible;
+          padding:0;margin:0}
+    .rail .card{max-width:none}
+    .grid4{grid-template-columns:repeat(2,1fr)}
+    .journal{grid-template-columns:repeat(2,1fr);gap:0 26px}
+    .igrid{grid-template-columns:repeat(6,1fr)}
+    form.news-form{grid-template-columns:1fr 130px;gap:8px}
+    .f-grid{grid-template-columns:2fr 1fr 1fr 1.4fr}
+    .story-media{min-height:420px}
+  }
+
+  /* ---------- desktop ---------- */
+  @media (min-width:1040px){
+    .wrap{padding:0 88px}
+    .hero-in{padding:0 88px 60px;min-height:clamp(560px,74vh,760px)}
+    .hero .num{right:88px}
+    .burger{display:none}
+    nav.primary{display:flex;gap:26px;flex:1}
+    nav.primary a{font-size:.62rem;letter-spacing:.22em;color:var(--ink-soft);position:relative;padding:4px 0}
+    nav.primary a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;
+                         background:var(--ink);transition:right .25s}
+    nav.primary a:hover::after{right:0}
+    .header-bag{display:none}
+    .header-right{display:flex;flex:1;justify-content:flex-end;gap:26px}
+    .header-right span{font-size:.62rem;letter-spacing:.22em;color:var(--ink-soft)}
+    .mobile-nav{display:none!important}
+    .section{padding-top:88px}
+    .sec-head{grid-template-columns:1.1fr .9fr;align-items:end;gap:40px;margin-bottom:40px}
+    .statement{font-size:2.05rem}
+    .sec-head p{font-size:.8rem}
+    .rail{gap:34px}
+    .story{display:grid;grid-template-columns:1fr 1fr;margin-top:96px}
+    .story-media{min-height:100%}
+    .story h2{font-size:1.9rem}
+    .story-body{padding:76px 88px 72px;display:flex;flex-direction:column;justify-content:center}
+    .quote{margin-top:96px;min-height:620px;padding:0}
+    .quote blockquote{font-size:2.6rem}
+    .duo{grid-template-columns:1fr 1fr;gap:22px}
+    .panel{padding-bottom:63.4%}
+    .p-body{left:34px;bottom:30px}
+    .journal{grid-template-columns:repeat(3,1fr);gap:0 34px}
+    .news{margin-top:88px;padding:60px 20px}
+    .news .t{font-size:1.7rem}
+    .igrid{gap:14px}
+    footer{padding:62px 0 40px}
+    .insta{padding-top:78px}
+  }
 </style>
 </head>
 <body>
-  <div class="box">
-    <h1>moodstore</h1>
-    <p>페이지 준비 중입니다.</p>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<div class="topbar">50,000원 이상 무료배송 <span class="dot">·</span> 평일 오후 2시 이전 결제 시 당일 출고 <span class="dot">·</span> 신규 회원 10% 쿠폰</div>
+
+<header class="site" id="site">
+  <div class="wrap bar">
+    <nav class="primary" aria-label="주요 메뉴">
+      <a href="#new">SHOP</a>
+      <a href="#collection">COLLECTION</a>
+      <a href="#story">STORY</a>
+      <a href="#journal">JOURNAL</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="brand-wrap"><a class="brand" href="#top" aria-label="SIFT 홈">SIFT</a></div>
+    <div class="header-right" aria-hidden="true">
+      <span>SEARCH</span><span>ACCOUNT</span><span>BAG 2</span>
+    </div>
+    <a class="bag header-bag" href="#new" aria-label="장바구니">BAG 2</a>
   </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#new">SHOP</a>
+    <a href="#collection">COLLECTION</a>
+    <a href="#story">STORY</a>
+    <a href="#journal">JOURNAL</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <picture>
+      <img src="assets/hero.jpg" alt="아침 햇살이 드는 식탁 위, 샌드와 스톤블랙 다담 그릇" fetchpriority="high">
+    </picture>
+    <span class="num">01 / 04</span>
+    <div class="hero-in">
+      <div class="hero-copy">
+        <div class="eyebrow">SIFT KITCHEN EDIT — 2026 WINTER</div>
+        <h1>매일의 식탁을<br>조금 더 다정하게</h1>
+        <p>손에 닿는 감촉부터 다시 고른 그릇.<br>겨울의 식탁을 위한 열두 가지 제안.</p>
+        <a class="btn" href="#pick">겨울 식탁 컬렉션 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">체로 거른, 오래 쓰는 물건 &nbsp;—&nbsp; SIFT SELECT SHOP &nbsp;—&nbsp; LIVING &amp; KITCHEN</div>
+
+  <section class="section" id="pick">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">01 — Editor's Pick</div>
+          <h2 class="statement">이번 주, 가장 많이<br>손이 간 그릇</h2>
+        </div>
+        <div>
+          <p>좋은 물건은 오래 쓰이는 이유가 있습니다. SIFT는 리뷰보다 쓰임을 먼저 보고, 한 달에 스무 개도 채 되지 않는 물건만 들입니다. 이번 주 가장 많이 선택받은 세 가지 그릇을 모았습니다. 화이트·샌드·스톤블랙, 세 가지 색으로 식탁의 온도를 바꿔 보세요.</p>
+          <a class="link" href="#new">에디터의 선택 전체 보기 →</a>
+        </div>
+      </div>
+
+      <div class="rail">
+        <article class="card">
+          <div class="thumb">
+            <img src="assets/p2213.jpg" alt="다담 파스타볼 2P — 화이트·샌드·스톤블랙 세 가지 색" loading="lazy">
+            <span class="badge">BEST</span>
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">ERATTO · 다담</div>
+          <div class="card-name">다담 파스타볼 2P</div>
+          <div class="card-opt">25cm · 2개 1세트</div>
+          <div class="card-price">35,900원</div>
+          <div class="card-foot">
+            <i class="dot w"></i><i class="dot s"></i><i class="dot b"></i><span class="ship">무료배송</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="assets/p2212.jpg" alt="다담 비빔기 2P — 세 가지 색" loading="lazy">
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">ERATTO · 다담</div>
+          <div class="card-name">다담 비빔기 2P</div>
+          <div class="card-opt">19cm · 2개 1세트</div>
+          <div class="card-price">35,900원</div>
+          <div class="card-foot">
+            <i class="dot w"></i><i class="dot s"></i><i class="dot b"></i><span class="ship">무료배송</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="assets/p2211.jpg" alt="다담 면기 2P — 세 가지 색" loading="lazy">
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">ERATTO · 다담</div>
+          <div class="card-name">다담 면기 2P</div>
+          <div class="card-opt">17cm · 2개 1세트</div>
+          <div class="card-price">26,900원</div>
+          <div class="card-foot">
+            <i class="dot w"></i><i class="dot s"></i><i class="dot b"></i><span class="ship">무료배송</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <div class="story-media">
+      <img class="cover" src="assets/story.jpg" alt="두 손으로 받쳐 든 스톤블랙 다담 파스타볼" loading="lazy">
+    </div>
+    <div class="story-body">
+      <div class="eyebrow">02 — Story</div>
+      <h2>손끝에 남는 그릇,<br>다담</h2>
+      <p>다담은 흙의 결을 그대로 남긴 도자기입니다. 유약을 얇게 입혀 손끝에 닿는 감촉이 매끄럽지 않고, 그 거친 면이 오히려 음식의 색을 더 또렷하게 만듭니다.</p>
+      <p>파스타볼은 25cm, 비빔기는 19cm. 국물이 많아도 넘치지 않도록 입을 살짝 넓혔고, 겹쳐 쌓아도 흔들리지 않도록 굽을 넓게 잡았습니다. 매일 씻고, 매일 다시 꺼내 쓰는 그릇의 조건입니다.</p>
+      <div class="story-meta"><span>도자기</span><span>3 COLOR</span><span>2P SET</span><span>식기세척기 사용 가능</span></div>
+      <a class="link" href="#journal">스토리 읽기 →</a>
+      <a class="story-shop" href="#new">
+        <span class="ss-thumb"><img src="assets/p2213.jpg" alt="" loading="lazy"></span>
+        <span>
+          <span class="ss-k">STORY에서 소개한 물건</span>
+          <span class="ss-name">다담 파스타볼 2P</span>
+          <span class="ss-price">35,900원 · 무료배송</span>
+        </span>
+        <span class="ss-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="quote">
+    <img src="assets/quote.jpg" alt="겨울 식탁 위에 놓인 국수 한 그릇과 다담 그릇들" loading="lazy">
+    <div>
+      <div class="mark">“</div>
+      <blockquote>그릇은, 오래 쓰는 물건입니다.</blockquote>
+      <div class="sub">유행보다 손에 남는 것을 고릅니다. SIFT의 기준은 언제나 쓰임입니다.</div>
+    </div>
+  </section>
+
+  <section class="section" id="new">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">03 — New In</div>
+          <h2 class="statement">겨울 주방에<br>새로 들어온 물건</h2>
+        </div>
+        <div>
+          <p>조리도구는 오래 쓰는 만큼 무게와 손잡이가 중요합니다. 이번 주 입고된 네 가지는 모두 인덕션과 가스레인지에서 함께 쓸 수 있는 제품으로 골랐습니다.</p>
+          <a class="link" href="#collection">신상품 전체 보기 →</a>
+        </div>
+      </div>
+
+      <div class="cards grid4">
+        <article class="card">
+          <div class="thumb">
+            <img src="assets/p1436.jpg" alt="퀸센스 OK만능 IH 사각구이팬" loading="lazy">
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">QUEENSENSE</div>
+          <div class="card-name">OK만능 IH 사각구이팬</div>
+          <div class="card-price">55,900원</div>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="assets/p1120.jpg" alt="올비아 IH 멀티웍 — 32cm와 36cm" loading="lazy">
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">OLVIA</div>
+          <div class="card-name">올비아 IH 멀티웍</div>
+          <div class="card-opt">32cm · 36cm</div>
+          <div class="card-price">49,800원 ~</div>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="assets/p2181.jpg" alt="퀸센스 올비아 IH 2단찜" loading="lazy">
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">QUEENSENSE · OLVIA</div>
+          <div class="card-name">올비아 IH 2단찜</div>
+          <div class="card-opt">32cm · 36cm</div>
+          <div class="card-price">63,400원 ~</div>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="assets/p2255.jpg" alt="온휴 다지기 3L" loading="lazy">
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">ONHYU</div>
+          <div class="card-name">온휴 다지기 3L</div>
+          <div class="card-price">49,800원</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="collection">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">04 — Collection</div>
+          <h2 class="statement">주방의 두 가지 결</h2>
+        </div>
+        <div>
+          <p>매일 쓰는 냄비와 팬, 그리고 자주 꺼내지 않지만 없으면 아쉬운 도구. 두 가지 기준으로 겨울 주방을 정리했습니다.</p>
+        </div>
+      </div>
+
+      <div class="duo">
+        <a class="panel" href="#new">
+          <img src="assets/collection1.jpg" alt="김이 오르는 검정 냄비와 목재 조리대" loading="lazy">
+          <span class="p-body">
+            <span class="p-tag">COLLECTION</span>
+            <span class="p-title">겨울 조리도구</span>
+            <span class="p-sub">올비아 IH 멀티웍 · 2단찜</span>
+          </span>
+          <span class="p-count">8 ITEMS</span>
+        </a>
+        <a class="panel" href="#new">
+          <img src="assets/collection2.jpg" alt="따뜻한 주방 조리대 위의 푸드프로세서와 채소" loading="lazy">
+          <span class="p-body">
+            <span class="p-tag">COLLECTION</span>
+            <span class="p-title">매일의 준비</span>
+            <span class="p-sub">온휴 다지기 3L · 채반 세트</span>
+          </span>
+          <span class="p-count">6 ITEMS</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="journal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">05 — Journal</div>
+          <h2 class="statement">그릇에 대한 짧은 기록</h2>
+        </div>
+        <div><a class="link" href="#journal">저널 전체 보기 →</a></div>
+      </div>
+
+      <div class="journal">
+        <article class="jcard">
+          <div class="jtag">KITCHEN NOTE</div>
+          <div class="jtitle">파스타볼, 25cm를<br>고른 이유</div>
+          <div class="jdate">2026. 11. 12</div>
+          <div class="jex">넓고 얕은 그릇이 소스를 고르게 입히는 이유를 사진으로 정리했습니다.</div>
+        </article>
+        <article class="jcard">
+          <div class="jtag">CARE</div>
+          <div class="jtitle">도자기를 오래<br>쓰는 세척법</div>
+          <div class="jdate">2026. 11. 05</div>
+          <div class="jex">전자레인지와 식기세척기, 사용 전에 확인해야 할 세 가지만.</div>
+        </article>
+        <article class="jcard">
+          <div class="jtag">TABLE</div>
+          <div class="jtitle">겨울 식탁의 색,<br>샌드와 스톤블랙</div>
+          <div class="jdate">2026. 10. 28</div>
+          <div class="jex">다담 3색을 조합해 한 상을 차리는 방법을 소개합니다.</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="insta">
+    <div class="wrap">
+      <div class="eyebrow">@SIFT_TABLE</div>
+      <div class="t">고객님의 식탁을 태그해 주세요</div>
+      <div class="s">사진을 남겨주신 분께는 매달 다담 머그를 보내드립니다.</div>
+      <div class="igrid">
+        <div class="ig"><img src="assets/p2213.jpg" alt="다담 파스타볼" loading="lazy"></div>
+        <div class="ig"><img src="assets/p2212.jpg" alt="다담 비빔기" loading="lazy"></div>
+        <div class="ig"><img src="assets/p2211.jpg" alt="다담 면기" loading="lazy"></div>
+        <div class="ig"><img src="assets/p2181.jpg" alt="올비아 2단찜" loading="lazy"></div>
+        <div class="ig"><img src="assets/p2255.jpg" alt="온휴 다지기" loading="lazy"></div>
+        <div class="ig"><img src="assets/hero.jpg" alt="겨울 식탁" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="news">
+    <div class="wrap">
+      <div class="eyebrow">Newsletter</div>
+      <div class="t">새로운 물건을 가장 먼저</div>
+      <div class="s">한 달에 두 번, 새로 들어온 물건과 편집숍 소식만 조용히 보내드립니다.</div>
+      <form class="news-form" id="newsForm">
+        <input type="email" name="email" required placeholder="이메일 주소를 입력해 주세요" aria-label="이메일 주소">
+        <button type="submit">구독하기</button>
+      </form>
+      <div class="fine">구독은 언제든 해지할 수 있으며, 수집한 이메일은 소식 발송에만 사용합니다.</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-logo">SIFT</div>
+        <div class="f-say">체로 거른, 오래 쓰는 물건.<br>리빙·주방 편집숍 SIFT가 고른 것들.</div>
+      </div>
+      <div class="f-list">
+        <div class="f-h">SHOP</div>
+        <a href="#pick">에디터의 선택</a>
+        <a href="#new">신상품</a>
+        <a href="#collection">컬렉션</a>
+        <a href="#story">스토리</a>
+      </div>
+      <div class="f-list">
+        <div class="f-h">HELP</div>
+        <a href="tel:01045448906">고객센터 전화</a>
+        <a href="mailto:wellmade9397@naver.com?subject=%5BSIFT%5D%20%EB%AC%B8%EC%9D%98">1:1 문의</a>
+        <a href="#journal">자주 묻는 질문</a>
+      </div>
+      <div class="f-list">
+        <div class="f-h">CONTACT</div>
+        <div>고객센터 010-4544-8906</div>
+        <div>평일 10:00 – 17:00 (점심 12:30 – 13:30)</div>
+        <a href="mailto:wellmade9397@naver.com">wellmade9397@naver.com</a>
+      </div>
+    </div>
+    <div class="f-rule"></div>
+    <div class="f-legal">
+      상호 부라더 &nbsp;|&nbsp; 사업자등록번호 312-52-24317 &nbsp;|&nbsp; 통신판매업 신고 제2026-서울-0000호 (등록 예정) &nbsp;|&nbsp; 출고·반품지 [57905] 전남 순천시 서면 순천로 630<br>
+      © SIFT. ALL RIGHTS RESERVED.
+    </div>
+    <div class="f-copy">DESIGNED IN SEOUL — 29CM / ZIGZAG BENCHMARK</div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var burger = document.getElementById('burger');
+    var site = document.getElementById('site');
+
+    if (burger) {
+      burger.addEventListener('click', function () {
+        var open = document.body.classList.toggle('menu-open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        burger.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+      });
+      document.getElementById('mobileNav').addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          document.body.classList.remove('menu-open');
+          burger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    function onScroll() {
+      if (window.scrollY > 8) site.classList.add('scrolled');
+      else site.classList.remove('scrolled');
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    var form = document.getElementById('newsForm');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = form.querySelector('input[name="email"]').value || '';
+        var subject = encodeURIComponent('[SIFT] 뉴스레터 구독 신청');
+        var body = encodeURIComponent('구독할 이메일: ' + email);
+        window.location.href = 'mailto:wellmade9397@naver.com?subject=' + subject + '&body=' + body;
+      });
+    }
+  })();
+</script>
 </body>
 </html>
