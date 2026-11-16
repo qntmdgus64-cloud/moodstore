@@ -205,6 +205,13 @@
   .insta .t{font-family:var(--serif);font-size:1.1rem;margin-top:10px}
   .insta .s{font-size:.72rem;color:var(--muted);margin-top:8px}
   .ig-foot{margin-top:20px;font-size:.54rem;letter-spacing:.22em;color:var(--muted)}
+  .ig-acc{display:inline-block;margin-top:14px;font-size:.68rem;letter-spacing:.16em;color:var(--ink);
+          border-bottom:1px solid var(--ink);padding-bottom:3px;transition:opacity .2s}
+  .ig-acc:hover{opacity:.55}
+  .ig-cta{display:inline-flex;align-items:center;gap:9px;margin-top:22px;padding:12px 26px;
+          border:1px solid var(--ink);font-size:.64rem;letter-spacing:.18em;color:var(--ink);
+          transition:background .25s,color .25s}
+  .ig-cta:hover{background:var(--ink);color:#F8F3E9}
   .igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
   .ig{position:relative;display:block;width:100%;padding:0 0 100%;overflow:hidden;
       background:#fff;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
@@ -356,6 +363,9 @@
   .lb-n{display:block;font-size:.76rem;margin-top:3px}
   .lb-p{display:block;font-size:.66rem;color:#B9B2A4;margin-top:2px}
   .lb-a{margin-left:auto;padding-right:4px}
+  .lb-ig{display:inline-block;margin:16px 0 0;font-size:.58rem;letter-spacing:.16em;color:#A2937A;
+    border-bottom:1px solid #4A443A;padding-bottom:3px}
+  .lb-ig:hover{color:#EFEAE0}
   .card.flash{box-shadow:0 0 0 2px var(--brass);border-radius:2px}
 
   @media (min-width:760px){
@@ -731,6 +741,7 @@
       <div class="eyebrow">LOOKBOOK — MOOD GALLERY</div>
       <div class="t">HARU PICK이 고른 겨울의 장면들</div>
       <div class="s">사진을 누르면 크게 볼 수 있습니다. 사진 속 물건은 아래에서 이어집니다.</div>
+      <div><a class="ig-acc" href="https://www.instagram.com/harupick.official/" target="_blank" rel="noopener noreferrer">@harupick.official</a></div>
       <div class="igrid">
         <button class="ig" type="button" data-lb="0" aria-label="겨울 아침 창가 사진 크게 보기"><img src="assets/hero-winter.jpg" alt="아침 햇살이 드는 원목 식탁 위, 파스텔 컬러 법랑 냄비 네 개" loading="lazy"></button>
         <button class="ig" type="button" data-lb="1" aria-label="법랑 냄비가 놓인 조리대 사진 크게 보기"><img src="assets/collection1.jpg" alt="원목 조리대 위에 가지런히 놓인 파스텔 법랑 냄비 세 개" loading="lazy"></button>
@@ -740,6 +751,7 @@
         <button class="ig" type="button" data-lb="5" aria-label="도자기 화병 사진 크게 보기"><img src="assets/p_vase.jpg" alt="웃는 얼굴 모양의 크림색 도자기 화병에 흰 꽃을 꽂은 모습" loading="lazy"></button>
       </div>
       <div class="ig-foot">HARU PICK STUDIO — 2026 WINTER COLLECTION</div>
+      <a class="ig-cta" href="https://www.instagram.com/harupick.official/" target="_blank" rel="noopener noreferrer">인스타그램에서 더 보기 →</a>
     </div>
   </section>
 
@@ -771,6 +783,7 @@
         <div>고객센터 010-4544-8906</div>
         <div>평일 10:00 – 17:00 (점심 12:30 – 13:30)</div>
         <a href="mailto:wellmade9397@naver.com">wellmade9397@naver.com</a>
+        <a href="https://www.instagram.com/harupick.official/" target="_blank" rel="noopener noreferrer">인스타그램 @harupick.official</a>
       </div>
     </div>
     <div class="f-rule"></div>
@@ -1099,6 +1112,7 @@
       h += '<span class="lb-th"><img src="' + p.img + '" alt=""></span>';
       h += '<span><span class="lb-k">사진 속 물건</span><span class="lb-n">' + p.name + '</span><span class="lb-p">' + p.price + ' · ' + p.ship + '</span></span>';
       h += '<span class="lb-a">→</span></button>';
+      h += '<a class="lb-ig" href="https://www.instagram.com/harupick.official/" target="_blank" rel="noopener noreferrer">@harupick.official — 이 장면은 인스타그램에서도 볼 수 있습니다 →</a>';
       return h;
     }
 
