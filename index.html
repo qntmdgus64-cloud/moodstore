@@ -74,9 +74,9 @@
 
   /* ---------- hero (split) ---------- */
   .hero{background:var(--sand)}
-  .hero-split{display:grid;grid-template-columns:1fr;max-width:1440px;margin:0 auto}
-  .hs-media{position:relative;background:#E7DFD1;line-height:0}
-  .hs-media img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover}
+  .hero-split{display:grid;grid-template-columns:1fr;margin:0 auto}
+  .hs-media{position:relative;background:#E7DFD1;line-height:0;overflow:hidden;aspect-ratio:1/1}
+  .hs-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
   .hs-cap{position:absolute;left:0;bottom:0;background:rgba(251,250,246,.92);
           font-size:.55rem;letter-spacing:.14em;color:var(--ink-soft);padding:8px 11px;line-height:1.4}
   .hs-copy{padding:34px 22px 46px;display:flex;flex-direction:column;justify-content:center}
@@ -166,7 +166,7 @@
   .quote{position:relative;isolation:isolate;overflow:hidden;margin-top:56px;display:grid;place-items:center;
          text-align:center;padding:78px 24px;color:#F7F2E8;min-height:340px}
   .quote img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-  .quote::after{content:"";position:absolute;inset:0;background:rgba(18,16,12,.6);z-index:-1}
+  .quote::after{content:"";position:absolute;inset:0;background:rgba(16,14,11,.68);z-index:-1}
   .quote .mark{font-family:var(--serif);font-size:1.7rem;color:rgba(247,242,232,.5);line-height:1}
   .quote blockquote{margin:8px 0 0;font-family:var(--serif);font-weight:400;
                     font-size:1.4rem;line-height:1.7;letter-spacing:.01em}
@@ -418,7 +418,7 @@
     .strip-extra{display:inline}
     .hero-split{grid-template-columns:1fr 1fr;align-items:stretch}
     .hs-copy{padding:52px 40px;order:-1}
-    .hs-media img{aspect-ratio:auto;height:100%}
+    .hs-media{aspect-ratio:auto}
     .cards{grid-template-columns:repeat(3,1fr);gap:34px 26px}
     .rail{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;overflow:visible;padding:0;margin:0}
     .rail .card{max-width:none;flex:none}
@@ -447,7 +447,7 @@
     .mobile-nav{display:none!important}
     .section{padding-top:88px}
     .hero-split{grid-template-columns:1fr 1.02fr;min-height:640px}
-    .hs-copy{padding:0 0 0 88px;max-width:600px}
+    .hs-copy{padding:0 56px 0 max(88px,calc((100vw - 1280px)/2 + 88px));max-width:none}
     .hero h1{font-size:2.5rem}
     .statement{font-size:2.02rem}
     .sec-head p{font-size:.8rem}
@@ -455,6 +455,7 @@
     .rail{gap:26px}
     .story{grid-template-columns:1fr 1fr;margin-top:96px}
     .story h2{font-size:1.9rem}
+    .story h2,.story p{max-width:32em}
     .story-body{padding:76px 88px 72px}
     .quote{margin-top:96px;min-height:460px;padding:0}
     .quote blockquote{font-size:2.4rem}
