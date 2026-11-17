@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HARU PICK — 매일의 식탁을 조금 더 다정하게 | 리빙·주방 편집숍</title>
-<meta name="description" content="HARU PICK은 유행보다 쓰임을 먼저 봅니다. 힘멜 법랑사각 냄비와 담음공방 온감 14P, 모인샵 도자기 화병까지 — 매일 손이 가는 그릇과 주방 도구를 골라 소개합니다.">
+<title>HARU PICK — 모던 주방 도기·식기 편집숍 | 담음공방 온감 · 포슬 · 힘멜</title>
+<meta name="description" content="무광 도자기와 법랑, 표정이 있는 화병까지. HARU PICK은 담음공방 온감 14P와 직사각 그라탕기, 포슬 타원접시, 힘멜 법랑사각 냄비를 골라 소개합니다. 사진 속 물건은 모두 판매 중인 상품입니다.">
 <meta name="theme-color" content="#17150F">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="HARU PICK">
-<meta property="og:title" content="HARU PICK — 겨울 식탁의 색을 고르다">
-<meta property="og:description" content="체로 거른, 오래 쓰는 물건. 리빙·주방 편집숍 HARU PICK의 2026 겨울 컬렉션 — 힘멜 법랑, 담음공방 온감, 그리고 겨울의 온기.">
+<meta property="og:title" content="HARU PICK — 오븐에서 식탁까지, 그릇의 온도">
+<meta property="og:description" content="체로 거른, 오래 쓰는 물건. 리빙·주방 편집숍 HARU PICK의 2026 겨울 — 담음공방 온감, 포슬, 힘멜 법랑 여덟 가지.">
 <meta property="og:image" content="https://qntmdgus64-cloud.github.io/moodstore/assets/og.jpg">
 <meta property="og:url" content="https://qntmdgus64-cloud.github.io/moodstore/">
 <meta name="twitter:card" content="summary_large_image">
@@ -72,29 +72,26 @@
   .mobile-nav a{display:block;padding:15px 22px;border-bottom:1px solid var(--line);
                 font-size:.8rem;letter-spacing:.14em}
 
-  /* ---------- hero ---------- */
-  .hero{position:relative;isolation:isolate;overflow:hidden;background:#221F19}
-  .hero>picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-                    object-position:50% 68%;z-index:-2}
-  .hero::after{content:"";position:absolute;inset:0;z-index:-1;
-    background:linear-gradient(0deg,rgba(17,15,12,.88) 0%,rgba(17,15,12,.42) 46%,rgba(17,15,12,.10) 100%)}
-  .hero-in{position:relative;min-height:clamp(480px,72vh,720px);display:flex;align-items:flex-end;
-           padding:0 22px 44px;max-width:1280px;margin:0 auto}
-  .hero-copy{max-width:520px;color:#F8F3E9}
-  .hero .eyebrow{color:#CFC0A6}
-  .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(1.85rem,6.4vw,3.6rem);
-           line-height:1.42;letter-spacing:-.01em;margin:16px 0 0;color:#FBF7EE}
-  .hero p{font-size:clamp(.8rem,2.6vw,.92rem);line-height:1.95;color:#D9D0BE;margin:16px 0 0}
-  .btn{display:inline-block;margin-top:26px;padding:13px 26px;border:1px solid rgba(248,243,233,.55);
-       color:#F8F3E9;font-size:.7rem;letter-spacing:.2em;transition:background .25s,color .25s}
-  .btn:hover{background:#F8F3E9;color:var(--ink)}
-  .hero .num{position:absolute;right:22px;top:20px;color:rgba(248,243,233,.8);
-             font-size:.62rem;letter-spacing:.24em}
+  /* ---------- hero (split) ---------- */
+  .hero{background:var(--sand)}
+  .hero-split{display:grid;grid-template-columns:1fr;max-width:1440px;margin:0 auto}
+  .hs-media{position:relative;background:#E7DFD1;line-height:0}
+  .hs-media img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover}
+  .hs-cap{position:absolute;left:0;bottom:0;background:rgba(251,250,246,.92);
+          font-size:.55rem;letter-spacing:.14em;color:var(--ink-soft);padding:8px 11px;line-height:1.4}
+  .hs-copy{padding:34px 22px 46px;display:flex;flex-direction:column;justify-content:center}
+  .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,6.1vw,2.5rem);
+           line-height:1.46;letter-spacing:-.01em;margin:14px 0 0}
+  .hero p{font-size:.84rem;line-height:2;color:var(--sub);margin:16px 0 0;max-width:400px}
+  .btn{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;margin-top:26px;
+       padding:13px 24px;border:1px solid var(--ink);color:var(--ink);font-size:.66rem;
+       letter-spacing:.2em;transition:background .25s,color .25s}
+  .btn:hover{background:var(--ink);color:#F8F3E9}
 
   /* ---------- strip ---------- */
   .strip-extra{display:none}
-  .strip{background:var(--sand);color:#5B5446;text-align:center;font-size:.62rem;
-         letter-spacing:.28em;padding:13px 10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+  .strip{background:var(--ink);color:#E7E0D2;text-align:center;font-size:.6rem;
+         letter-spacing:.28em;padding:12px 10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 
   /* ---------- section head ---------- */
   section[id]{scroll-margin-top:84px}
@@ -111,37 +108,43 @@
   .linkbtn:hover{opacity:.55}
 
   /* ---------- product cards ---------- */
-  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px 14px}
-  .card{display:flex;flex-direction:column}
-  .thumb{position:relative;width:100%;padding-bottom:100%;background:#fff;overflow:hidden}
-  .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:50% 50%}
-  .badge{position:absolute;left:12px;top:12px;background:var(--ink);color:#F8F3E9;
-         font-size:.56rem;letter-spacing:.18em;padding:5px 8px;z-index:2}
-  .wish{position:absolute;right:10px;top:10px;width:28px;height:28px;border:1px solid #DCD5C7;
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 14px}
+  .card{display:flex;flex-direction:column;cursor:pointer}
+  .thumb{position:relative;width:100%;padding-bottom:100%;background:var(--sand);overflow:hidden}
+  .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;
+             transition:transform .7s ease}
+  .card:hover .thumb img{transform:scale(1.03)}
+  .badge{position:absolute;left:10px;top:10px;background:var(--ink);color:#F8F3E9;
+         font-size:.54rem;letter-spacing:.18em;padding:5px 8px;z-index:2}
+  .wish{position:absolute;right:9px;top:9px;width:28px;height:28px;border:1px solid #DCD5C7;
         border-radius:50%;background:rgba(255,255,255,.82);display:grid;place-items:center;
         font-size:.8rem;line-height:1;color:#6B6455;z-index:2;cursor:pointer;
         transition:border-color .2s,color .2s}
   .wish:hover{border-color:var(--ink);color:var(--ink)}
-  .card-brand{margin-top:13px;font-size:.58rem;letter-spacing:.22em;color:var(--muted)}
-  .card-name{margin-top:6px;font-size:.86rem;font-weight:500;letter-spacing:-.01em}
-  .card-opt{margin-top:4px;font-size:.68rem;color:var(--muted)}
+  .card-brand{margin-top:13px;font-size:.58rem;letter-spacing:.2em;color:var(--muted)}
+  .card-name{margin-top:6px;font-size:.86rem;font-weight:500;letter-spacing:-.01em;line-height:1.5}
+  .card-opt{margin-top:4px;font-size:.66rem;color:var(--muted);line-height:1.6}
   .card-price{margin-top:5px;font-size:.8rem}
   .card-foot{margin-top:10px;display:flex;align-items:center;gap:6px}
   .dot{width:7px;height:7px;border-radius:50%;border:1px solid #CFC7B8;display:inline-block}
   .dot.w{background:#F6F3EC}.dot.s{background:#D8C4A4}.dot.b{background:#3A3733}
   .dot.bl{background:#A9C4DA}.dot.pk{background:#E9C6C8}
   .dot.yl{background:#EFD793}.dot.gr{background:#A9C3A6}
-  .ship{margin-left:auto;font-size:.56rem;letter-spacing:.12em;color:var(--muted)}
+  .dot.am{background:#C79A4E}.dot.sg{background:#8B9C86}.dot.mu{background:#E0B24A}.dot.cm{background:#E9E0CE}
+  .ship{margin-left:auto;font-size:.55rem;letter-spacing:.12em;color:var(--muted)}
 
   /* card rail (mobile) */
   .rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
         padding:0 0 6px;margin:0;-webkit-overflow-scrolling:touch}
   .rail::-webkit-scrollbar{height:0}
-  .rail .card{flex:0 0 66%;max-width:262px;scroll-snap-align:start}
+  .rail .card{flex:0 0 68%;max-width:280px;scroll-snap-align:start}
 
   /* ---------- story ---------- */
   .story{margin-top:56px;background:var(--sand)}
-  .story-media{position:relative;min-height:360px;overflow:hidden;background:#E4DACA}
+  .story-media{position:relative;min-height:340px;overflow:hidden;background:#E4DACA}
+  .story-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 46%}
+  .story-media .cap{position:absolute;left:0;bottom:0;background:rgba(251,250,246,.9);
+        font-size:.55rem;letter-spacing:.14em;color:var(--ink-soft);padding:8px 11px}
   .story-body{padding:36px 22px 44px}
   .story h2{font-family:var(--serif);font-weight:400;font-size:1.45rem;
             line-height:1.55;margin:12px 0 0}
@@ -149,9 +152,11 @@
   .story-meta{margin-top:22px;font-size:.6rem;letter-spacing:.2em;color:#7C7466}
   .story-meta span{margin-right:12px}
   .story .link{margin-top:18px;align-self:flex-start}
-  .story-shop{margin-top:34px;border-top:1px solid #D3C8B3;padding-top:16px;display:flex;align-items:center;gap:12px}
+  .story-shop{margin-top:34px;border-top:1px solid #D3C8B3;padding-top:16px;display:flex;align-items:center;gap:12px;
+              background:none;border-left:0;border-right:0;border-bottom:0;font:inherit;color:inherit;
+              text-align:left;cursor:pointer;width:100%}
   .ss-thumb{width:52px;height:52px;flex:0 0 52px;background:#fff;overflow:hidden;position:relative}
-  .ss-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+  .ss-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .ss-k{font-size:.56rem;letter-spacing:.2em;color:var(--brass);display:block}
   .ss-name{font-size:.76rem;margin-top:4px;display:block}
   .ss-price{font-size:.7rem;color:#6E6657;margin-top:2px;display:block}
@@ -159,34 +164,29 @@
 
   /* ---------- quote ---------- */
   .quote{position:relative;isolation:isolate;overflow:hidden;margin-top:56px;display:grid;place-items:center;
-         text-align:center;padding:70px 24px;color:#F7F2E8;min-height:340px}
+         text-align:center;padding:78px 24px;color:#F7F2E8;min-height:340px}
   .quote img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-  .quote::after{content:"";position:absolute;inset:0;background:rgba(18,16,12,.58);z-index:-1}
+  .quote::after{content:"";position:absolute;inset:0;background:rgba(18,16,12,.6);z-index:-1}
   .quote .mark{font-family:var(--serif);font-size:1.7rem;color:rgba(247,242,232,.5);line-height:1}
   .quote blockquote{margin:8px 0 0;font-family:var(--serif);font-weight:400;
                     font-size:1.4rem;line-height:1.7;letter-spacing:.01em}
-  .quote .sub{font-size:.76rem;line-height:1.95;color:rgba(247,242,232,.8);margin-top:16px}
+  .quote .sub{font-size:.76rem;line-height:1.95;color:rgba(247,242,232,.82);margin-top:16px;max-width:420px}
 
-  /* ---------- collection panels ---------- */
-  .duo{display:grid;gap:14px}
-  .panel{position:relative;isolation:isolate;overflow:hidden;display:block;width:100%;
-         padding:0 0 66.5%;color:#F8F3E9;border:0;background:none;text-align:left;
-         font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
-  .panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
-             transition:transform .8s ease}
-  .panel:hover img{transform:scale(1.04)}
-  .panel::after{content:"";position:absolute;inset:0;z-index:-1;
-    background:linear-gradient(0deg,rgba(17,15,12,.74) 0%,rgba(17,15,12,.06) 62%)}
-  .p-body{position:absolute;left:20px;bottom:20px}
-  .p-tag{font-size:.56rem;letter-spacing:.24em;color:rgba(248,243,233,.86);
-         text-shadow:0 1px 6px rgba(17,15,12,.6)}
-  .p-title{font-family:var(--serif);font-size:1.12rem;margin-top:8px;display:block}
-  .p-sub{font-size:.68rem;color:rgba(248,243,233,.9);margin-top:6px;display:block;
-          text-shadow:0 1px 6px rgba(17,15,12,.6)}
-  .p-view{display:block;margin-top:11px;font-size:.55rem;letter-spacing:.18em;color:#F8F3E9;
-          border-bottom:1px solid rgba(248,243,233,.55);padding-bottom:3px;width:max-content}
-  .p-count{position:absolute;right:20px;bottom:22px;font-size:.6rem;letter-spacing:.18em;
-           color:rgba(248,243,233,.8)}
+  /* ---------- collection tiles ---------- */
+  .duo{display:grid;gap:26px}
+  .panel{display:flex;flex-direction:column;width:100%;padding:0;border:0;background:none;
+         font:inherit;color:inherit;text-align:left;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .panel-media{position:relative;display:block;padding:0 0 75%;overflow:hidden;background:var(--sand)}
+  .panel-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+  .panel:hover .panel-media img{transform:scale(1.035)}
+  .p-count{position:absolute;right:10px;top:10px;background:rgba(251,250,246,.94);color:var(--ink-soft);
+           font-size:.52rem;letter-spacing:.16em;padding:5px 8px}
+  .p-body{display:block;padding:15px 0 0}
+  .p-tag{font-size:.55rem;letter-spacing:.24em;color:var(--brass)}
+  .p-title{display:block;font-family:var(--serif);font-size:1.14rem;margin-top:8px}
+  .p-sub{display:block;font-size:.72rem;color:var(--muted);margin-top:6px;line-height:1.7}
+  .p-view{display:inline-block;margin-top:12px;font-size:.56rem;letter-spacing:.18em;
+          border-bottom:1px solid var(--ink);padding-bottom:3px}
 
   /* ---------- journal ---------- */
   .journal{display:grid;gap:0}
@@ -212,9 +212,9 @@
           border:1px solid var(--ink);font-size:.64rem;letter-spacing:.18em;color:var(--ink);
           transition:background .25s,color .25s}
   .ig-cta:hover{background:var(--ink);color:#F8F3E9}
-  .igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+  .igrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}
   .ig{position:relative;display:block;width:100%;padding:0 0 100%;overflow:hidden;
-      background:#fff;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+      background:var(--sand);border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
   .ig::after{content:"VIEW";position:absolute;left:0;right:0;bottom:0;padding:6px 0;text-align:center;
       font-size:.5rem;letter-spacing:.2em;color:#fff;background:linear-gradient(0deg,rgba(17,15,12,.55),transparent);
       opacity:0;transition:opacity .25s}
@@ -252,15 +252,17 @@
     padding:0 16px calc(44px + env(safe-area-inset-bottom,0px))}
 
   /* editorial article */
-  .ed-hero{margin:0 -16px 0;aspect-ratio:16/10;overflow:hidden;background:#EDE7DB}
-  .ed-hero img{width:100%;height:100%;object-fit:cover}
+  .ed-hero{margin:0 -16px 0;aspect-ratio:16/10;overflow:hidden;background:var(--sand)}
+  .ed-hero img{width:100%;height:100%;object-fit:cover;object-position:50% 44%}
+  .ed-hero.sm{aspect-ratio:auto;display:grid;place-items:center;padding:30px 0}
+  .ed-hero.sm img{width:290px;height:290px;object-fit:contain}
   .ed{max-width:660px;margin:0 auto;padding-top:24px}
   .ed-meta{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.56rem;letter-spacing:.18em;color:var(--muted)}
   .ed-lead{font-family:var(--serif);font-size:1.02rem;line-height:1.95;color:var(--ink-soft);margin:14px 0 0}
   .ed h2{font-family:var(--serif);font-weight:600;font-size:.98rem;line-height:1.6;margin:34px 0 0;color:var(--ink)}
   .ed h2::before{content:"";display:block;width:24px;height:1px;background:var(--brass);margin-bottom:13px}
   .ed p{font-size:.84rem;line-height:2.05;color:var(--sub);margin:11px 0 0}
-  .ed-fig{margin:26px -16px 0}
+  .ed-fig{margin:26px -16px 0;background:var(--sand)}
   .ed-fig img{width:100%;aspect-ratio:4/3;object-fit:cover}
   .ed-fig figcaption{font-size:.6rem;line-height:1.75;color:var(--muted);padding:9px 16px 0;letter-spacing:.04em}
   .ed-pull{margin:30px 0 0;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
@@ -273,7 +275,7 @@
     transition:border-color .2s}
   .buy:hover{border-color:var(--ink)}
   .buy-th{width:62px;height:62px;flex:0 0 62px;position:relative;overflow:hidden;background:#fff}
-  .buy-th img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+  .buy-th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .buy-n{display:block;font-size:.8rem;line-height:1.5}
   .buy-p{display:block;font-size:.7rem;color:var(--sub);margin-top:3px}
   .buy-arrow{margin-left:auto;padding-right:4px;color:var(--ink)}
@@ -290,7 +292,7 @@
   .ed-list:hover{border-color:var(--line);color:var(--ink)}
 
   /* collection detail */
-  .col-hero{margin:0 -16px 0;aspect-ratio:3/2;overflow:hidden;background:#E4DACA}
+  .col-hero{margin:0 -16px 0;aspect-ratio:3/2;overflow:hidden;background:var(--sand)}
   .col-hero img{width:100%;height:100%;object-fit:cover}
   .col-in{max-width:660px;margin:0 auto;padding-top:24px}
   .col-lead{font-family:var(--serif);font-size:.98rem;line-height:1.95;color:var(--ink-soft);margin:0}
@@ -299,8 +301,8 @@
     border-bottom:1px solid var(--line);font-size:.55rem;letter-spacing:.2em;color:var(--muted)}
   .crow{display:flex;align-items:center;gap:14px;width:100%;padding:16px 0;border:0;
     border-bottom:1px solid var(--line);background:none;text-align:left;font:inherit;color:inherit;cursor:pointer}
-  .crow-th{width:62px;height:62px;flex:0 0 62px;position:relative;overflow:hidden;background:#fff}
-  .crow-th img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+  .crow-th{width:62px;height:62px;flex:0 0 62px;position:relative;overflow:hidden;background:var(--sand)}
+  .crow-th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .crow-t{min-width:0}
   .crow-b{display:block;font-size:.54rem;letter-spacing:.2em;color:var(--muted)}
   .crow-n{display:block;font-size:.82rem;line-height:1.5;margin-top:4px}
@@ -319,7 +321,7 @@
   .arch-lead{font-size:.78rem;line-height:1.95;color:var(--sub);margin:22px 0 26px}
 
   /* product quick view */
-  .pv-img{margin:0 -16px;aspect-ratio:1/1;position:relative;background:#fff}
+  .pv-img{margin:0 -16px;position:relative;background:var(--sand);height:clamp(230px,36vh,330px)}
   .pv-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
   .pv{max-width:560px;margin:0 auto;padding-top:24px}
   .pv-brand{display:block;font-size:.54rem;letter-spacing:.22em;color:var(--muted)}
@@ -359,7 +361,7 @@
     font:inherit;cursor:pointer;transition:border-color .2s}
   .lb-shop:hover{border-color:#EFEAE0}
   .lb-th{width:52px;height:52px;flex:0 0 52px;position:relative;overflow:hidden;background:#fff}
-  .lb-th img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+  .lb-th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .lb-k{display:block;font-size:.5rem;letter-spacing:.22em;color:#A2937A}
   .lb-n{display:block;font-size:.76rem;margin-top:3px}
   .lb-p{display:block;font-size:.66rem;color:#B9B2A4;margin-top:2px}
@@ -375,11 +377,13 @@
     .ov-panel.lb{max-width:1120px;height:auto;max-height:92vh}
     .ov-head{padding:15px 26px}
     .ov-body{padding:0 26px calc(46px + env(safe-area-inset-bottom,0px))}
-    .ed-hero{margin:0 -26px 0;aspect-ratio:16/9}
+    .ed-hero{margin:0 -26px 0;aspect-ratio:4/3}
+    .ed-hero.sm{padding:36px 0}
+    .ed-hero.sm img{width:330px;height:330px}
     .ed-fig{margin:28px -26px 0}
     .ed-fig figcaption{padding:9px 26px 0}
     .col-hero{margin:0 -26px 0;aspect-ratio:2/1}
-    .pv-img{margin:0 -26px;aspect-ratio:16/9}
+    .pv-img{margin:0 -26px;height:clamp(260px,40vh,360px)}
     .lb-stage{margin:0 -26px}
     .lb-img{max-height:58vh}
   }
@@ -401,35 +405,36 @@
     *,*::before,*::after{transition:none!important;animation:none!important}
   }
 
-  /* ---------- tablet ---------- */
   /* ---------- small phones ---------- */
   @media (max-width:400px){
     .brand{font-size:1.02rem;letter-spacing:.30em;text-indent:.30em}
-    .hero .eyebrow{font-size:.62rem;letter-spacing:.20em}
+    .hero .eyebrow{font-size:.6rem;letter-spacing:.18em}
   }
 
+  /* ---------- tablet ---------- */
   @media (min-width:760px){
     .wrap{padding:0 40px}
     .topbar .opt{display:inline}
     .strip-extra{display:inline}
-    .hero-in{padding:0 40px 56px}
-    .hero .num{right:40px;top:26px}
+    .hero-split{grid-template-columns:1fr 1fr;align-items:stretch}
+    .hs-copy{padding:52px 40px;order:-1}
+    .hs-media img{aspect-ratio:auto;height:100%}
     .cards{grid-template-columns:repeat(3,1fr);gap:34px 26px}
-    .rail{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;overflow:visible;
-          padding:0;margin:0}
-    .rail .card{max-width:none}
-    .grid4{grid-template-columns:repeat(2,1fr)}
+    .rail{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;overflow:visible;padding:0;margin:0}
+    .rail .card{max-width:none;flex:none}
+    .story{display:grid;grid-template-columns:1fr 1fr}
+    .story-media{min-height:100%}
+    .story-body{padding:52px 40px}
+    .duo{grid-template-columns:1fr 1fr;gap:26px}
     .journal{grid-template-columns:repeat(2,1fr);gap:0 26px}
-    .igrid{grid-template-columns:repeat(6,1fr)}
+    .igrid{grid-template-columns:repeat(3,1fr)}
     .f-grid{grid-template-columns:2fr 1fr 1fr 1.4fr}
-    .story-media{min-height:420px}
+    .sec-head{grid-template-columns:1.1fr .9fr;align-items:end;gap:40px;margin-bottom:40px}
   }
 
   /* ---------- desktop ---------- */
   @media (min-width:1040px){
     .wrap{padding:0 88px}
-    .hero-in{padding:0 88px 60px;min-height:clamp(560px,74vh,760px)}
-    .hero .num{right:88px}
     .burger{display:none}
     nav.primary{display:flex;gap:26px;flex:1}
     nav.primary a{font-size:.62rem;letter-spacing:.22em;color:var(--ink-soft);position:relative;padding:4px 0}
@@ -441,22 +446,21 @@
     .header-right span{font-size:.62rem;letter-spacing:.22em;color:var(--ink-soft)}
     .mobile-nav{display:none!important}
     .section{padding-top:88px}
-    .sec-head{grid-template-columns:1.1fr .9fr;align-items:end;gap:40px;margin-bottom:40px}
-    .statement{font-size:2.05rem}
+    .hero-split{grid-template-columns:1fr 1.02fr;min-height:640px}
+    .hs-copy{padding:0 0 0 88px;max-width:600px}
+    .hero h1{font-size:2.5rem}
+    .statement{font-size:2.02rem}
     .sec-head p{font-size:.8rem}
-    .rail{gap:34px}
-    .story{display:grid;grid-template-columns:1fr 1fr;margin-top:96px}
-    .story-media{min-height:100%}
+    .cards{grid-template-columns:repeat(4,1fr);gap:36px 26px}
+    .rail{gap:26px}
+    .story{grid-template-columns:1fr 1fr;margin-top:96px}
     .story h2{font-size:1.9rem}
-    .story-body{padding:76px 88px 72px;display:flex;flex-direction:column;justify-content:center}
-    .quote{margin-top:96px;min-height:620px;padding:0}
-    .quote blockquote{font-size:2.6rem}
-    .grid4{grid-template-columns:repeat(4,1fr);gap:34px 26px}
-    .duo{grid-template-columns:1fr 1fr;gap:22px}
-    .panel{padding-bottom:63.4%}
-    .p-body{left:34px;bottom:30px}
+    .story-body{padding:76px 88px 72px}
+    .quote{margin-top:96px;min-height:460px;padding:0}
+    .quote blockquote{font-size:2.4rem}
+    .duo{gap:30px}
     .journal{grid-template-columns:repeat(3,1fr);gap:0 34px}
-    .igrid{gap:14px}
+    .igrid{grid-template-columns:repeat(6,1fr);gap:12px}
     footer{padding:62px 0 40px}
     .insta{padding:78px 0 96px}
   }
@@ -470,7 +474,7 @@
 <header class="site" id="site">
   <div class="wrap bar">
     <nav class="primary" aria-label="주요 메뉴">
-      <a href="#new">SHOP</a>
+      <a href="#shop">SHOP</a>
       <a href="#collection">COLLECTION</a>
       <a href="#story">STORY</a>
       <a href="#journal">JOURNAL</a>
@@ -482,10 +486,10 @@
     <div class="header-right" aria-hidden="true">
       <span>SEARCH</span><span>ACCOUNT</span><span>BAG</span>
     </div>
-    <a class="bag header-bag" href="#new" aria-label="장바구니">BAG</a>
+    <a class="bag header-bag" href="#shop" aria-label="장바구니">BAG</a>
   </div>
   <div class="mobile-nav" id="mobileNav">
-    <a href="#new">SHOP</a>
+    <a href="#shop">SHOP</a>
     <a href="#collection">COLLECTION</a>
     <a href="#story">STORY</a>
     <a href="#journal">JOURNAL</a>
@@ -494,16 +498,16 @@
 
 <main id="main">
   <section class="hero" id="top">
-    <picture>
-      <img src="assets/hero-winter.jpg" alt="아침 햇살이 드는 원목 식탁 위, 파스텔 컬러 법랑 냄비 네 개" fetchpriority="high">
-    </picture>
-    <span class="num">01 / 04</span>
-    <div class="hero-in">
-      <div class="hero-copy">
+    <div class="hero-split">
+      <div class="hs-media">
+        <img src="assets/p_gratin.jpg" alt="담음공방 온감 직사각 그라탕기 세 가지 색에 새우 그라탕·감자 그라탕·조개 파스타를 담아 든 모습" fetchpriority="high">
+        <span class="hs-cap">담음공방 온감 직사각 그라탕기 · 설백 / 자황 / 흑단</span>
+      </div>
+      <div class="hs-copy">
         <div class="eyebrow">HARU PICK KITCHEN EDIT — 2026 WINTER</div>
-        <h1>겨울 식탁의<br>색을 고르다</h1>
-        <p>힘멜 법랑 네 가지 색, 무광 도자기 2인 세트,<br>그리고 웃는 얼굴의 화병. 겨울을 위한 일곱 가지 제안.</p>
-        <a class="btn" href="#pick">겨울 컬렉션 보기</a>
+        <h1>오븐에서 식탁까지,<br>그릇의 온도</h1>
+        <p>리브로 눌러 만든 무광 도자기, 담음공방 온감. 그라탕기와 핸디보울, 세 색으로 나오는 타원접시, 그리고 법랑 냄비까지 — 겨울 부엌을 위해 여덟 가지만 골랐습니다.</p>
+        <a class="btn" href="#pick">겨울 컬렉션 보기 →</a>
       </div>
     </div>
   </section>
@@ -515,52 +519,68 @@
       <div class="sec-head">
         <div>
           <div class="eyebrow">01 — Editor's Pick</div>
-          <h2 class="statement">이번 주, 가장 많이<br>장바구니에 담긴 물건</h2>
+          <h2 class="statement">이번 주, 가장 많이<br>장바구니에 담긴 네 가지</h2>
         </div>
         <div>
-          <p>좋은 물건은 오래 쓰이는 이유가 있습니다. HARU PICK은 리뷰보다 쓰임을 먼저 보고, 한 달에 스무 개도 채 되지 않는 물건만 들입니다. 이번 주 가장 많이 선택받은 세 가지 — 불 앞에 두는 법랑 냄비, 이인 식탁을 위한 무광 도자기 14P, 그리고 꽃을 꽂으면 표정이 생기는 화병입니다.</p>
-          <a class="link" href="#new">에디터의 선택 전체 보기 →</a>
+          <p>좋은 물건은 오래 쓰이는 이유가 있습니다. HARU PICK은 리뷰보다 쓰임을 먼저 보고, 한 달에 스무 개도 채 되지 않는 물건만 들입니다. 오븐에서 바로 나와 식탁에 놓이는 그라탕기, 세 색을 한 벌로 쓸 수 있는 핸디보울, 두 개가 한 세트인 타원접시, 그리고 꽃이 없어도 자리를 지키는 화병입니다.</p>
+          <a class="link" href="#shop">에디터의 선택 전체 보기 →</a>
         </div>
       </div>
 
       <div class="rail">
-        <article class="card" id="card-enamel" data-p="enamel" role="button" tabindex="0" aria-label="힘멜 법랑사각 냄비 14 / 16cm 상세 보기">
+        <article class="card" id="card-gratin" data-p="gratin" role="button" tabindex="0" aria-label="담음공방 온감 직사각 그라탕기 상세 보기">
           <div class="thumb">
-            <img src="assets/p_enamel.jpg" alt="파스텔 블루·핑크·옐로우·그린 힘멜 법랑사각 냄비 네 개와 원목 뚜껑" loading="lazy">
-            <span class="badge">BEST</span>
-            <span class="wish" aria-hidden="true">♡</span>
-          </div>
-          <div class="card-brand">HIMMEL · 힘멜</div>
-          <div class="card-name">법랑사각 냄비 14 / 16cm</div>
-          <div class="card-opt">깊은형 14cm · 낮은형 16cm</div>
-          <div class="card-price">39,900원</div>
-          <div class="card-foot">
-            <i class="dot bl"></i><i class="dot pk"></i><i class="dot yl"></i><i class="dot gr"></i><span class="ship">무료배송</span>
-          </div>
-        </article>
-
-        <article class="card" id="card-dameum" data-p="dameum" role="button" tabindex="0" aria-label="담음공방 온감 홈세트 14P 상세 보기">
-          <div class="thumb">
-            <img src="assets/p_dameum14p.jpg" alt="무광 크림·토프·차콜 담음공방 온감 홈세트 14P로 차린 이인 식탁" loading="lazy">
+            <img src="assets/p_gratin.jpg" alt="설백·자황·흑단 담음공방 온감 직사각 그라탕기 세 개" loading="lazy">
+            <span class="badge">NEW</span>
             <span class="wish" aria-hidden="true">♡</span>
           </div>
           <div class="card-brand">DAMEUM GONGBANG · 담음공방</div>
-          <div class="card-name">온감 홈세트 14P</div>
-          <div class="card-opt">2인 · 14P · 크림·토프·차콜</div>
+          <div class="card-name">온감 직사각 그라탕기</div>
+          <div class="card-opt">설백 · 자황 · 흑단 3색</div>
+          <div class="card-price">17,900원</div>
+          <div class="card-foot">
+            <i class="dot w"></i><i class="dot am"></i><i class="dot b"></i><span class="ship">무료배송</span>
+          </div>
+        </article>
+
+        <article class="card" id="card-handybowl" data-p="handybowl" role="button" tabindex="0" aria-label="담음공방 온감 핸디보울 3색 세트 상세 보기">
+          <div class="thumb">
+            <img src="assets/p_handybowl.jpg" alt="설백·자황·흑단 담음공방 온감 핸디보울에 파스타와 그라탕을 담은 모습" loading="lazy">
+            <span class="badge">SET</span>
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">DAMEUM GONGBANG · 담음공방</div>
+          <div class="card-name">온감 핸디보울 3색 세트</div>
+          <div class="card-opt">3색 각 1개 · 한 손 잡이</div>
+          <div class="card-price">40,900원</div>
+          <div class="card-foot">
+            <i class="dot w"></i><i class="dot am"></i><i class="dot b"></i><span class="ship">무료배송</span>
+          </div>
+        </article>
+
+        <article class="card" id="card-poseul" data-p="poseul" role="button" tabindex="0" aria-label="포슬 타원접시 2P 세트 상세 보기">
+          <div class="thumb">
+            <img src="assets/p_poseul.jpg" alt="포그·웜우드·머스타드 세 색 포슬 타원접시를 원목 테이블에 놓은 모습" loading="lazy">
+            <span class="badge">SET</span>
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">ERATO · 포슬</div>
+          <div class="card-name">타원접시 2P 세트</div>
+          <div class="card-opt">2개 1세트 · 3색 중 선택</div>
           <div class="card-price">33,900원</div>
           <div class="card-foot">
-            <i class="dot w"></i><i class="dot s"></i><i class="dot b"></i><span class="ship">무료배송</span>
+            <i class="dot sg"></i><i class="dot cm"></i><i class="dot mu"></i><span class="ship">무료배송</span>
           </div>
         </article>
 
         <article class="card" id="card-vase" data-p="vase" role="button" tabindex="0" aria-label="모인샵 도자기 화병 뷰티 상세 보기">
           <div class="thumb">
-            <img src="assets/p_vase.jpg" alt="웃는 얼굴 모양의 크림색 도자기 화병에 흰 꽃을 꽂은 모습" loading="lazy">
+            <img src="assets/p_vase.jpg" alt="둥근 몸에 눈·입과 두 팔 손잡이, 두 다리가 있는 크림색 모인샵 도자기 화병" loading="lazy">
             <span class="wish" aria-hidden="true">♡</span>
           </div>
           <div class="card-brand">MOIN SHOP · 모인샵</div>
           <div class="card-name">도자기 화병 뷰티</div>
-          <div class="card-opt">양손 · 크림 · 1개</div>
+          <div class="card-opt">손잡이형 · 크림 · 1개</div>
           <div class="card-price">55,900원</div>
           <div class="card-foot">
             <i class="dot w"></i><span class="ship">무료배송</span>
@@ -572,29 +592,30 @@
 
   <section class="story" id="story">
     <div class="story-media">
-      <img class="cover" src="assets/story.jpg" alt="핑크색 법랑 냄비의 원목 뚜껑을 두 손으로 여는 모습" loading="lazy">
+      <img class="cover" src="assets/p_poseul.jpg" alt="원목 테이블 위, 포슬 타원접시 세 색과 마른 꽃" loading="lazy">
+      <span class="cap">포슬 타원접시 — 포그 · 웜우드 · 머스타드</span>
     </div>
     <div class="story-body">
       <div class="eyebrow">02 — Story</div>
-      <h2>불에서 식탁까지,<br>법랑의 하루</h2>
-      <p>힘멜은 독일에서 시작한 법랑 브랜드입니다. 쇠에 유약을 입혀 구워낸 법랑은 열을 고르게 전하고, 냄새가 배지 않으며, 오래 써도 색이 바래지 않습니다. 은은한 파스텔 네 색은 부엌의 수납장 안에서도, 식탁 위에 그대로 올려도 어색하지 않습니다.</p>
-      <p>깊은형 14cm는 1~2인 국과 찌개에, 낮은형 16cm는 조림이나 볶음 요리에 맞습니다. 뚜껑은 원목이라 뜨거운 냄비에서도 손이 편하고, 겹쳐 쌓아도 흔들리지 않습니다. 매일 불 앞에 세워도, 그릇처럼 식탁에 올려도 되는 냄비입니다.</p>
-      <div class="story-meta"><span>법랑</span><span>4 COLOR</span><span>14 / 16cm</span><span>원목 뚜껑</span></div>
+      <h2>세 가지 색 중,<br>하나를 고르는 일</h2>
+      <p>포슬 타원접시는 포그, 웜우드, 머스타드 세 색으로 나옵니다. 유약은 광택을 덜어내고 가장자리만 갈색으로 눌렀습니다. 그래서 색이 분명한데도 부엌에서 튀지 않고, 원목 식탁 위에서 나무의 결을 이깁니다.</p>
+      <p>타원형은 접시와 트레이의 중간입니다. 앞접시로 쓰고, 올리브와 치즈를 담고, 현관에서 열쇠를 받는 자리에 놓아도 됩니다. 두 개가 한 세트라 같은 색으로 맞춰도, 두 색을 섞어 짝지어도 좋습니다.</p>
+      <div class="story-meta"><span>국내 제작</span><span>3 COLOR</span><span>2P 세트</span><span>무광 도자기</span></div>
       <a class="link" href="#journal">스토리 읽기 →</a>
-      <a class="story-shop" href="#new">
-        <span class="ss-thumb"><img src="assets/p_enamel.jpg" alt="" loading="lazy"></span>
+      <button class="story-shop" type="button" data-go="pv:poseul">
+        <span class="ss-thumb"><img src="assets/p_poseul.jpg" alt="" loading="lazy"></span>
         <span>
           <span class="ss-k">STORY에서 소개한 물건</span>
-          <span class="ss-name">힘멜 법랑사각 냄비 14 / 16cm</span>
-          <span class="ss-price">39,900원 · 무료배송</span>
+          <span class="ss-name">포슬 타원접시 2P 세트</span>
+          <span class="ss-price">33,900원 · 무료배송</span>
         </span>
         <span class="ss-arrow" aria-hidden="true">→</span>
-      </a>
+      </button>
     </div>
   </section>
 
   <section class="quote">
-    <img src="assets/quote.jpg" alt="세이지 그린과 옐로우 법랑 냄비, 무광 그릇에 담긴 저녁 상" loading="lazy">
+    <img src="assets/quote.jpg" alt="그라탕기 세 개에 담긴 저녁 상" loading="lazy">
     <div>
       <div class="mark">“</div>
       <blockquote>그릇은, 오래 쓰는 물건입니다.</blockquote>
@@ -602,62 +623,107 @@
     </div>
   </section>
 
-  <section class="section" id="new">
+  <section class="section" id="shop">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <div class="eyebrow">03 — New In</div>
-          <h2 class="statement">겨울 방과 식탁에<br>새로 들어온 물건</h2>
+          <div class="eyebrow">03 — Shop</div>
+          <h2 class="statement">이번 겨울의<br>여덟 가지</h2>
         </div>
         <div>
-          <p>이번 주 입고된 네 가지입니다. 매일 손이 가는 커트러리 두 세트, 그리고 겨울 방의 온도를 올리는 두 가지. 커트러리는 법랑 냄비와 같은 브랜드라 함께 놓으면 한 벌처럼 보입니다.</p>
-          <a class="link" href="#collection">신상품 전체 보기 →</a>
+          <p>법랑 냄비 하나와 커트러리 두 벌, 온감의 그릇 세 가지, 타원접시 한 벌, 그리고 화병 하나. 같은 톤으로 맞춰 두면 부엌과 식탁이 한 공간처럼 이어집니다. 사진은 모두 지금 판매하는 상품의 실제 사진입니다.</p>
+          <a class="link" href="#collection">컬렉션으로 묶어 보기 →</a>
         </div>
       </div>
 
-      <div class="cards grid4">
-        <article class="card" id="card-cut_essence" data-p="cut_essence" role="button" tabindex="0" aria-label="힘멜 에센스 커트러리 4P 상세 보기">
+      <div class="cards">
+        <article class="card" id="card-gratin2" data-p="gratin" role="button" tabindex="0" aria-label="담음공방 온감 직사각 그라탕기 상세 보기">
           <div class="thumb">
-            <img src="assets/p_cutlery_essence.jpg" alt="힘멜 에센스 커트러리 4P — 나이프·포크·스푼·티스푼" loading="lazy">
+            <img src="assets/p_gratin.jpg" alt="설백·자황·흑단 담음공방 온감 직사각 그라탕기 세 개" loading="lazy">
             <span class="wish" aria-hidden="true">♡</span>
           </div>
-          <div class="card-brand">HIMMEL</div>
+          <div class="card-brand">DAMEUM GONGBANG</div>
+          <div class="card-name">온감 직사각 그라탕기</div>
+          <div class="card-opt">3색 · 오븐 사용</div>
+          <div class="card-price">17,900원</div>
+        </article>
+
+        <article class="card" id="card-handybowl2" data-p="handybowl" role="button" tabindex="0" aria-label="담음공방 온감 핸디보울 3색 세트 상세 보기">
+          <div class="thumb">
+            <img src="assets/p_handybowl.jpg" alt="설백·자황·흑단 담음공방 온감 핸디보울에 파스타와 그라탕을 담은 모습" loading="lazy">
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">DAMEUM GONGBANG</div>
+          <div class="card-name">온감 핸디보울 3색 세트</div>
+          <div class="card-opt">3색 각 1개</div>
+          <div class="card-price">40,900원</div>
+        </article>
+
+        <article class="card" id="card-dameum" data-p="dameum" role="button" tabindex="0" aria-label="담음공방 온감 홈세트 14P 상세 보기">
+          <div class="thumb">
+            <img src="assets/p_dameum14p.jpg" alt="무광 크림·토프·차콜 담음공방 온감 홈세트 14P로 차린 이인 식탁" loading="lazy">
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">DAMEUM GONGBANG</div>
+          <div class="card-name">온감 홈세트 14P</div>
+          <div class="card-opt">2인 · 14P · 3색</div>
+          <div class="card-price">33,900원</div>
+        </article>
+
+        <article class="card" id="card-poseul2" data-p="poseul" role="button" tabindex="0" aria-label="포슬 타원접시 2P 세트 상세 보기">
+          <div class="thumb">
+            <img src="assets/p_poseul.jpg" alt="포그·웜우드·머스타드 세 색 포슬 타원접시를 원목 테이블에 놓은 모습" loading="lazy">
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">ERATO · 포슬</div>
+          <div class="card-name">타원접시 2P 세트</div>
+          <div class="card-opt">2개 1세트 · 3색 중 선택</div>
+          <div class="card-price">33,900원</div>
+        </article>
+
+        <article class="card" id="card-enamel" data-p="enamel" role="button" tabindex="0" aria-label="힘멜 법랑사각 냄비 14 / 16cm 상세 보기">
+          <div class="thumb">
+            <img src="assets/p_enamel.jpg" alt="파스텔 블루·핑크·옐로우·그린 힘멜 법랑사각 냄비 네 개와 원목 손잡이" loading="lazy">
+            <span class="badge">BEST</span>
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">HIMMEL · 힘멜</div>
+          <div class="card-name">법랑사각 냄비 14 / 16cm</div>
+          <div class="card-opt">깊은형 14cm · 낮은형 16cm</div>
+          <div class="card-price">39,900원</div>
+        </article>
+
+        <article class="card" id="card-cut_essence" data-p="cut_essence" role="button" tabindex="0" aria-label="힘멜 에센스 커트러리 4P 상세 보기">
+          <div class="thumb">
+            <img src="assets/p_cutlery_essence.jpg" alt="힘멜 에센스 커트러리 4P — 둥근 손잡이의 나이프·포크·스푼·티스푼" loading="lazy">
+            <span class="wish" aria-hidden="true">♡</span>
+          </div>
+          <div class="card-brand">HIMMEL · 힘멜</div>
           <div class="card-name">에센스 커트러리 4P</div>
-          <div class="card-opt">4P 세트 · 1인</div>
+          <div class="card-opt">4P · 1인 · 둥근 손잡이</div>
           <div class="card-price">16,900원</div>
         </article>
 
         <article class="card" id="card-cut_house" data-p="cut_house" role="button" tabindex="0" aria-label="힘멜 하우스 커트러리 4P 상세 보기">
           <div class="thumb">
-            <img src="assets/p_cutlery_house.jpg" alt="힘멜 하우스 커트러리 4P — 무광 마감의 나이프·포크·스푼·티스푼" loading="lazy">
+            <img src="assets/p_cutlery_house.jpg" alt="힘멜 하우스 커트러리 4P — 납작한 손잡이의 나이프·포크·스푼·티스푼" loading="lazy">
             <span class="wish" aria-hidden="true">♡</span>
           </div>
-          <div class="card-brand">HIMMEL</div>
+          <div class="card-brand">HIMMEL · 힘멜</div>
           <div class="card-name">하우스 커트러리 4P</div>
-          <div class="card-opt">4P 세트 · 1인</div>
+          <div class="card-opt">4P · 1인 · 납작한 손잡이</div>
           <div class="card-price">17,900원</div>
         </article>
 
-        <article class="card" id="card-bodysolar" data-p="bodysolar" role="button" tabindex="0" aria-label="바디솔라 맥반석 찜질기 BM-5001 상세 보기">
+        <article class="card" id="card-vase2" data-p="vase" role="button" tabindex="0" aria-label="모인샵 도자기 화병 뷰티 상세 보기">
           <div class="thumb">
-            <img src="assets/p_bodysolar.jpg" alt="바디솔라 맥반석 원적외선 찜질기 BM-5001 크림 색" loading="lazy">
+            <img src="assets/p_vase.jpg" alt="둥근 몸에 눈·입과 두 팔 손잡이, 두 다리가 있는 크림색 모인샵 도자기 화병" loading="lazy">
             <span class="wish" aria-hidden="true">♡</span>
           </div>
-          <div class="card-brand">BODY SOLAR</div>
-          <div class="card-name">맥반석 찜질기 BM-5001</div>
-          <div class="card-opt">2색 · 약 380g</div>
-          <div class="card-price">98,000원</div>
-        </article>
-
-        <article class="card" id="card-blanket" data-p="blanket" role="button" tabindex="0" aria-label="프리폼 겨울 극세사 차렵이불 상세 보기">
-          <div class="thumb">
-            <img src="assets/p_blanket.jpg" alt="프리폼 겨울 극세사 차렵이불 SS — 블루" loading="lazy">
-            <span class="wish" aria-hidden="true">♡</span>
-          </div>
-          <div class="card-brand">PREFORM · 프리폼</div>
-          <div class="card-name">겨울 극세사 차렵이불</div>
-          <div class="card-opt">SS · 5색</div>
-          <div class="card-price">42,600원</div>
+          <div class="card-brand">MOIN SHOP</div>
+          <div class="card-name">도자기 화병 뷰티</div>
+          <div class="card-opt">손잡이형 · 크림</div>
+          <div class="card-price">55,900원</div>
         </article>
       </div>
     </div>
@@ -668,34 +734,38 @@
       <div class="sec-head">
         <div>
           <div class="eyebrow">04 — Collection</div>
-          <h2 class="statement">법랑의 색,<br>테이블의 온도</h2>
+          <h2 class="statement">법랑의 색,<br>온감의 그릇</h2>
         </div>
         <div>
-          <p>불 앞에 두는 냄비와 식탁 위에 놓는 그릇, 그리고 겨울 방의 온기. 같은 재질과 같은 톤으로 묶으면 부엌과 방이 한 공간처럼 이어집니다. 두 가지 결로 겨울을 정리했습니다.</p>
+          <p>같은 브랜드, 같은 톤으로 묶으면 부엌과 식탁이 한 공간처럼 이어집니다. 두 가지 결로 겨울을 정리했습니다. 배너에 있는 물건은 모두 컬렉션 안에서 판매하는 상품이고, 그 상품의 실제 사진입니다.</p>
           <p class="hint">이미지를 누르면 컬렉션의 물건을 한 번에 볼 수 있습니다.</p>
         </div>
       </div>
 
       <div class="duo">
         <button class="panel" type="button" data-col="col1" aria-label="법랑의 색 컬렉션 열기">
-          <img src="assets/collection1.jpg" alt="원목 조리대 위에 가지런히 놓인 파스텔 법랑 냄비 세 개" loading="lazy">
+          <span class="panel-media">
+            <img src="assets/col_enamel.jpg" alt="힘멜 법랑사각 냄비와 에센스·하우스 커트러리 실물 사진 세 장" loading="lazy">
+            <span class="p-count">3 ITEMS</span>
+          </span>
           <span class="p-body">
-            <span class="p-tag">COLLECTION</span>
+            <span class="p-tag">HIMMEL</span>
             <span class="p-title">법랑의 색</span>
-            <span class="p-sub">힘멜 법랑사각 · 커트러리 2종</span>
+            <span class="p-sub">법랑사각 냄비 14 / 16cm · 커트러리 2종</span>
             <span class="p-view">컬렉션 보기 →</span>
           </span>
-          <span class="p-count">3 ITEMS</span>
         </button>
-        <button class="panel" type="button" data-col="col2" aria-label="테이블의 온도 컬렉션 열기">
-          <img src="assets/collection2.jpg" alt="무광 크림 도자기와 얼굴 화병으로 차린 겨울 식탁" loading="lazy">
+        <button class="panel" type="button" data-col="col2" aria-label="온감의 그릇 컬렉션 열기">
+          <span class="panel-media">
+            <img src="assets/p_handybowl.jpg" alt="담음공방 온감 핸디보울 세 색에 파스타와 그라탕을 담은 모습" loading="lazy">
+            <span class="p-count">5 ITEMS</span>
+          </span>
           <span class="p-body">
-            <span class="p-tag">COLLECTION</span>
-            <span class="p-title">테이블의 온도</span>
-            <span class="p-sub">담음공방 온감 14P · 뷰티 화병</span>
+            <span class="p-tag">DAMEUM · POSEUL · MOIN</span>
+            <span class="p-title">온감의 그릇</span>
+            <span class="p-sub">온감 14P · 그라탕기 · 핸디보울 · 타원접시 · 화병</span>
             <span class="p-view">컬렉션 보기 →</span>
           </span>
-          <span class="p-count">2 ITEMS</span>
         </button>
       </div>
     </div>
@@ -719,18 +789,18 @@
           <div class="jex">깊은형과 낮은형, 무엇을 어디에 쓰는지 사진으로 정리했습니다.</div>
           <span class="jread">읽기 →</span>
         </button>
-        <button class="jcard" type="button" data-art="j2" aria-label="저널 열기: 도자기를 오래 쓰는 세척법">
+        <button class="jcard" type="button" data-art="j2" aria-label="저널 열기: 무광 도자기를 오래 쓰는 법">
           <div class="jtag">CARE</div>
-          <div class="jtitle">도자기를 오래<br>쓰는 세척법</div>
-          <div class="jdate">2026. 11. 05 · 5분</div>
-          <div class="jex">전자레인지와 식기세척기, 사용 전에 확인해야 할 세 가지만.</div>
+          <div class="jtitle">무광 도자기를<br>오래 쓰는 법</div>
+          <div class="jdate">2026. 11. 08 · 5분</div>
+          <div class="jex">오븐과 전자레인지, 식기세척기. 사용 전에 확인할 세 가지만.</div>
           <span class="jread">읽기 →</span>
         </button>
         <button class="jcard" type="button" data-art="j3" aria-label="저널 열기: 화병 하나로 바꾸는 겨울 방">
           <div class="jtag">TABLE</div>
           <div class="jtitle">화병 하나로 바꾸는<br>겨울 방</div>
           <div class="jdate">2026. 10. 28 · 4분</div>
-          <div class="jex">생화가 아니어도 좋습니다. 드라이플라워와 어울리는 오브제 셋.</div>
+          <div class="jex">생화가 아니어도 좋습니다. 드라이플라워와 어울리는 자리.</div>
           <span class="jread">읽기 →</span>
         </button>
       </div>
@@ -741,15 +811,15 @@
     <div class="wrap">
       <div class="eyebrow">LOOKBOOK — MOOD GALLERY</div>
       <div class="t">HARU PICK이 고른 겨울의 장면들</div>
-      <div class="s">사진을 누르면 크게 볼 수 있습니다. 사진 속 물건은 아래에서 이어집니다.</div>
+      <div class="s">사진을 누르면 크게 볼 수 있습니다. 사진 속 물건은 모두 판매 중인 상품입니다.</div>
       <div><a class="ig-acc" href="https://www.instagram.com/harupick.official/" target="_blank" rel="noopener noreferrer">@harupick.official</a></div>
       <div class="igrid">
-        <button class="ig" type="button" data-lb="0" aria-label="겨울 아침 창가 사진 크게 보기"><img src="assets/hero-winter.jpg" alt="아침 햇살이 드는 원목 식탁 위, 파스텔 컬러 법랑 냄비 네 개" loading="lazy"></button>
-        <button class="ig" type="button" data-lb="1" aria-label="법랑 냄비가 놓인 조리대 사진 크게 보기"><img src="assets/collection1.jpg" alt="원목 조리대 위에 가지런히 놓인 파스텔 법랑 냄비 세 개" loading="lazy"></button>
-        <button class="ig" type="button" data-lb="2" aria-label="법랑 냄비 뚜껑을 여는 사진 크게 보기"><img src="assets/story.jpg" alt="핑크색 법랑 냄비의 원목 뚜껑을 두 손으로 여는 모습" loading="lazy"></button>
-        <button class="ig" type="button" data-lb="3" aria-label="무광 도자기로 차린 이인 식탁 사진 크게 보기"><img src="assets/collection2.jpg" alt="무광 크림 도자기와 얼굴 화병으로 차린 겨울 식탁" loading="lazy"></button>
-        <button class="ig" type="button" data-lb="4" aria-label="겨울 상차림 사진 크게 보기"><img src="assets/quote.jpg" alt="세이지 그린과 옐로우 법랑 냄비, 무광 그릇에 담긴 저녁 상" loading="lazy"></button>
-        <button class="ig" type="button" data-lb="5" aria-label="도자기 화병 사진 크게 보기"><img src="assets/p_vase.jpg" alt="웃는 얼굴 모양의 크림색 도자기 화병에 흰 꽃을 꽂은 모습" loading="lazy"></button>
+        <button class="ig" type="button" data-lb="0" aria-label="그라탕기 세 색 사진 크게 보기"><img src="assets/lb1.jpg" alt="담음공방 온감 직사각 그라탕기 세 색에 담긴 요리" loading="lazy"></button>
+        <button class="ig" type="button" data-lb="1" aria-label="포슬 타원접시 세 색 사진 크게 보기"><img src="assets/lb2.jpg" alt="원목 테이블 위 포슬 타원접시 세 색" loading="lazy"></button>
+        <button class="ig" type="button" data-lb="2" aria-label="핸디보울 세 색 사진 크게 보기"><img src="assets/lb3.jpg" alt="담음공방 온감 핸디보울 세 색과 파스타·그라탕" loading="lazy"></button>
+        <button class="ig" type="button" data-lb="3" aria-label="도자기 화병 사진 크게 보기"><img src="assets/lb4.jpg" alt="크림색 모인샵 도자기 화병에 흰 꽃을 꽂은 모습" loading="lazy"></button>
+        <button class="ig" type="button" data-lb="4" aria-label="그라탕기 손잡이 확대 사진 크게 보기"><img src="assets/lb5.jpg" alt="리브 성형과 양손 손잡이가 보이는 그라탕기 확대 컷" loading="lazy"></button>
+        <button class="ig" type="button" data-lb="5" aria-label="타원접시 가장자리 확대 사진 크게 보기"><img src="assets/lb6.jpg" alt="갈색 테두리의 포슬 타원접시 확대 컷" loading="lazy"></button>
       </div>
       <div class="ig-foot">HARU PICK STUDIO — 2026 WINTER COLLECTION</div>
       <a class="ig-cta" href="https://www.instagram.com/harupick.official/" target="_blank" rel="noopener noreferrer">인스타그램에서 더 보기 →</a>
@@ -768,7 +838,7 @@
       <div class="f-list">
         <div class="f-h">SHOP</div>
         <a href="#pick">에디터의 선택</a>
-        <a href="#new">신상품</a>
+        <a href="#shop">상품 전체</a>
         <a href="#collection">컬렉션</a>
         <a href="#story">스토리</a>
         <a href="#lookbook">룩북</a>
@@ -851,11 +921,28 @@
     var P = {
       enamel: {
         brand: 'HIMMEL · 힘멜', name: '법랑사각 냄비 14 / 16cm',
-        opt: '깊은형 14cm · 낮은형 16cm · 4색',
+        opt: '깊은형 14cm(블루·핑크) · 낮은형 16cm(옐로우·그린)',
         price: '39,900원', ship: '무료배송', img: 'assets/p_enamel.jpg',
-        desc: '쇠에 유약을 입혀 구워낸 법랑 냄비입니다. 열이 고르게 퍼지고 냄새가 배지 않아 국과 찌개에 매일 쓰기 좋습니다. 원목 뚜껑은 뜨거운 냄비에서도 손이 편하고, 겹쳐 쌓아도 흔들리지 않습니다.',
-        spec: [['소재', '법랑(스틸 코어) · 원목 뚜껑'], ['크기', '깊은형 14cm · 낮은형 16cm'],
-               ['색상', '블루 · 핑크 · 옐로우 · 그린'], ['관리', '손세척 권장 · 급격한 온도 변화 주의']]
+        desc: '쇠에 유약을 입혀 구워낸 사각 법랑 냄비입니다. 열이 고르게 퍼지고 냄새가 배지 않아 국과 찌개에 매일 쓰기 좋습니다. 원목 손잡이는 뜨거운 냄비에서도 손이 편하고, 겹쳐 쌓아도 흔들리지 않습니다.',
+        spec: [['소재', '법랑(스틸 코어) · 원목 손잡이'], ['크기', '깊은형 14cm · 낮은형 16cm'],
+               ['색상', '블루 · 핑크 · 옐로우 · 그린'], ['원산지', '중국'],
+               ['관리', '손세척 권장 · 급격한 온도 변화 주의']]
+      },
+      cut_essence: {
+        brand: 'HIMMEL · 힘멜', name: '에센스 커트러리 4P',
+        opt: '4P 세트 · 1인 · 둥근 손잡이',
+        price: '16,900원', ship: '무료배송', img: 'assets/p_cutlery_essence.jpg',
+        desc: '나이프·포크·스푼·티스푼으로 구성한 1인 커트러리 세트입니다. 손잡이가 둥글게 말려 손에 감기고, 법랑 냄비와 같은 톤이라 함께 놓으면 한 벌처럼 보입니다.',
+        spec: [['구성', '4P (나이프·포크·스푼·티스푼)'], ['인원', '1인'],
+               ['손잡이', '둥근형'], ['소재', '스테인리스'], ['관리', '손세척 권장']]
+      },
+      cut_house: {
+        brand: 'HIMMEL · 힘멜', name: '하우스 커트러리 4P',
+        opt: '4P 세트 · 1인 · 납작한 손잡이',
+        price: '17,900원', ship: '무료배송', img: 'assets/p_cutlery_house.jpg',
+        desc: '손잡이가 넓고 납작한 4P 커트러리 세트입니다. 식탁에 놓았을 때 면이 반듯하게 서고, 무광 그릇과 함께 놓을 때 톤이 잘 맞습니다.',
+        spec: [['구성', '4P (나이프·포크·스푼·티스푼)'], ['인원', '1인'],
+               ['손잡이', '납작형'], ['소재', '스테인리스'], ['관리', '손세척 권장']]
       },
       dameum: {
         brand: 'DAMEUM GONGBANG · 담음공방', name: '온감 홈세트 14P',
@@ -863,47 +950,43 @@
         price: '33,900원', ship: '무료배송', img: 'assets/p_dameum14p.jpg',
         desc: '무광 유약으로 마감한 2인 홈세트 14P입니다. 빛을 반사하지 않아 음식의 색이 도드라지고, 크림·토프·차콜 세 가지 톤이 한 상에 자연스럽게 섞입니다.',
         spec: [['구성', '2인 14P'], ['색상', '크림 · 토프 · 차콜'],
-               ['소재', '무광 도자기'], ['관리', '손세척 권장 · 사용 전 제품 표기 확인']]
+               ['소재', '무광 도자기'], ['원산지', '중국'],
+               ['관리', '손세척 권장 · 사용 전 제품 표기 확인']]
+      },
+      gratin: {
+        brand: 'DAMEUM GONGBANG · 담음공방', name: '온감 직사각 그라탕기',
+        opt: '설백 · 자황 · 흑단 3색',
+        price: '17,900원', ship: '무료배송', img: 'assets/p_gratin.jpg',
+        desc: '세로 리브를 눌러 성형한 직사각 그라탕기입니다. 양옆에 손잡이가 붙어 오븐에서 꺼낼 때와 상에 올릴 때 모두 편합니다. 무광 크림·토프·차콜 톤이라 그라탕이 식은 뒤에도 그릇으로 남습니다.',
+        spec: [['색상', '설백 · 자황 · 흑단'], ['소재', '무광 도자기 (리브 성형)'],
+               ['사용', '오븐 · 전자레인지 사용 가능'], ['원산지', '중국'],
+               ['관리', '손세척 권장 · 급격한 온도 변화 주의']]
+      },
+      handybowl: {
+        brand: 'DAMEUM GONGBANG · 담음공방', name: '온감 핸디보울 3색 세트',
+        opt: '3색 각 1개 · 한 손 잡이',
+        price: '40,900원', ship: '무료배송', img: 'assets/p_handybowl.jpg',
+        desc: '한쪽에 손잡이가 붙은 무광 볼을 세 색으로 묶은 세트입니다. 파스타·그라탕·샐러드를 한 그릇으로 담고, 오븐에서 꺼내 그대로 상에 올릴 수 있습니다. 단품으로는 마진이 남지 않아 세 색 한 벌로만 들였습니다.',
+        spec: [['구성', '3색 각 1개 (설백·자황·흑단)'], ['소재', '무광 도자기'],
+               ['사용', '오븐 · 전자레인지 사용 가능'], ['원산지', '중국'],
+               ['관리', '손세척 권장 · 급격한 온도 변화 주의']]
+      },
+      poseul: {
+        brand: 'ERATO · 포슬', name: '타원접시 2P 세트',
+        opt: '2개 1세트 · 포그 / 웜우드 / 머스타드 중 선택',
+        price: '33,900원', ship: '무료배송', img: 'assets/p_poseul.jpg',
+        desc: '포그(세이지 그린), 웜우드(크림), 머스타드(옐로우) 세 색으로 나오는 타원접시 2P 세트입니다. 유약은 광택을 덜어내고 가장자리만 갈색으로 눌러, 색이 분명해도 식탁에서 차분합니다. 앞접시·트레이·과일 접시로 두루 씁니다.',
+        spec: [['구성', '타원접시 2개 (1세트)'], ['색상', '포그 · 웜우드 · 머스타드'],
+               ['소재', '무광 도자기'], ['원산지', '국내'],
+               ['관리', '손세척 권장 · 사용 전 제품 표기 확인']]
       },
       vase: {
         brand: 'MOIN SHOP · 모인샵', name: '도자기 화병 뷰티',
-        opt: '양손 크기 · 크림 · 1개',
+        opt: '손잡이형 · 크림 · 1개',
         price: '55,900원', ship: '무료배송', img: 'assets/p_vase.jpg',
-        desc: '웃는 얼굴을 새긴 크림색 도자기 화병입니다. 꽃이 없어도 오브제로 놓을 수 있고, 한 줄기만 꽂아도 표정이 살아납니다.',
-        spec: [['크기', '양손에 드는 크기 · 1개'], ['색상', '크림'],
-               ['소재', '도자기'], ['관리', '물세척 후 완전 건조']]
-      },
-      cut_essence: {
-        brand: 'HIMMEL · 힘멜', name: '에센스 커트러리 4P',
-        opt: '4P 세트 · 1인',
-        price: '16,900원', ship: '무료배송', img: 'assets/p_cutlery_essence.jpg',
-        desc: '나이프·포크·스푼·티스푼으로 구성한 1인 커트러리 세트입니다. 손에 잡히는 무게가 가볍고, 법랑 냄비와 같은 톤이라 함께 놓으면 한 벌처럼 보입니다.',
-        spec: [['구성', '4P (나이프·포크·스푼·티스푼)'], ['인원', '1인'],
-               ['소재', '스테인리스'], ['관리', '손세척 권장']]
-      },
-      cut_house: {
-        brand: 'HIMMEL · 힘멜', name: '하우스 커트러리 4P',
-        opt: '4P 세트 · 1인',
-        price: '17,900원', ship: '무료배송', img: 'assets/p_cutlery_house.jpg',
-        desc: '무광 마감을 더한 4P 커트러리 세트입니다. 빛을 부드럽게 받아 식탁 위에서 은은하게 보이고, 무광 그릇과 함께 놓을 때 톤이 잘 맞습니다.',
-        spec: [['구성', '4P (나이프·포크·스푼·티스푼)'], ['인원', '1인'],
-               ['소재', '스테인리스 (무광 마감)'], ['관리', '손세척 권장']]
-      },
-      bodysolar: {
-        brand: 'BODY SOLAR', name: '맥반석 찜질기 BM-5001',
-        opt: '2색 · 약 380g',
-        price: '98,000원', ship: '무료배송', img: 'assets/p_bodysolar.jpg',
-        desc: '맥반석을 이용한 원적외선 찜질기 BM-5001입니다. 약 380g으로 가벼워 소파나 침대에서 쓰기 좋고, 겨울철 배와 허리를 데우는 데 씁니다.',
-        spec: [['모델', 'BM-5001'], ['무게', '약 380g'],
-               ['색상', '2색'], ['관리', '전원 사양·사용 시간은 제품 표기 확인']]
-      },
-      blanket: {
-        brand: 'PREFORM · 프리폼', name: '겨울 극세사 차렵이불',
-        opt: 'SS · 5색',
-        price: '42,600원', ship: '무료배송', img: 'assets/p_blanket.jpg',
-        desc: '겨울용 극세사 차렵이불 SS입니다. 촉감이 부드럽고 가벼워 이불을 두 겹으로 덮기 부담스러운 분에게 맞습니다.',
-        spec: [['규격', 'SS'], ['색상', '5색'],
-               ['소재', '극세사'], ['관리', '단독 세탁 · 저온 건조']]
+        desc: '둥근 몸에 눈과 입을 새기고, 양옆에 팔처럼 손잡이를 붙인 크림색 도자기 화병입니다. 두 다리로 서 있어 꽃이 없어도 오브제로 놓을 수 있고, 한 줄기만 꽂아도 표정이 살아납니다.',
+        spec: [['형태', '양옆 손잡이 · 두 다리'], ['색상', '크림'],
+               ['소재', '도자기'], ['원산지', '중국'], ['관리', '물세척 후 완전 건조']]
       }
     };
 
@@ -912,8 +995,8 @@
       j1: {
         tag: 'KITCHEN NOTE', date: '2026. 11. 14', read: '읽기 4분',
         title: '법랑 냄비, 14cm와 16cm',
-        hero: 'assets/story.jpg',
-        heroAlt: '핑크색 법랑 냄비의 원목 뚜껑을 두 손으로 여는 모습',
+        hero: 'assets/p_enamel.jpg', heroSm: true,
+        heroAlt: '파스텔 블루·핑크·옐로우·그린 힘멜 법랑사각 냄비 네 개와 원목 손잡이',
         ex: '깊은형과 낮은형, 무엇을 어디에 쓰는지 사진으로 정리했습니다.',
         lead: '냄비를 고를 때 가장 많이 갈리는 지점은 크기입니다. 1~2인 가구라면 14cm로 충분하다는 말과, 넉넉한 16cm가 낫다는 말이 함께 돌아다닙니다. 두 크기를 나란히 놓고 각각 무엇을 하는 데 쓰이는지 정리했습니다.',
         body: [
@@ -923,10 +1006,8 @@
           { h: '16cm, 조림과 볶음을 위한 넓이',
             p: ['낮은형 16cm는 바닥이 넓습니다. 재료를 펼쳐 놓을 수 있어 조림이나 볶음에서 골고루 익습니다. 닭볶음탕, 감자조림, 두부부침처럼 수분이 적고 뒤적여야 하는 요리에 어울립니다.',
                 '법랑은 열을 고르게 퍼뜨리지만 화력이 센 곳에 오래 두면 유약이 상할 수 있습니다. 중불 이하에서 시작해 마지막에만 불을 올리는 편이 좋습니다.'] },
-          { fig: { src: 'assets/collection1.jpg', alt: '원목 조리대 위에 놓인 파스텔 법랑 냄비 세 개',
-                   cap: '법랑은 열을 고르게 전하고 냄새가 배지 않습니다. 같은 톤으로 맞추면 겹쳐 두어도 부엌이 어수선해 보이지 않습니다.' } },
-          { h: '두 개를 함께 두면',
-            p: ['14cm에 국을, 16cm에 조림을 올리면 한 상이 됩니다. 같은 색 계열로 맞추면 겹쳐 쌓을 때도 부엌이 정돈되어 보입니다. 냄비는 수납장 안보다 불 앞에 두는 시간이 많으니, 색은 오래 봐도 질리지 않는 쪽이 좋습니다.'] },
+          { h: '네 가지 색, 두 가지 크기',
+            p: ['색은 크기마다 나뉘어 있습니다. 깊은형 14cm는 블루와 핑크, 낮은형 16cm는 옐로우와 그린입니다. 그래서 한 쌍을 맞추면 크기와 색이 함께 다르고, 겹쳐 두었을 때 위아래가 구분됩니다.'] },
           { pull: '크기는 요리보다 생활에 맞춥니다. 몇 명이 먹는지보다, 무엇을 자주 끓이는지가 먼저입니다.' },
           { h: '그래서, 처음이라면',
             p: ['처음이라면 14cm 하나로 시작해 보시길 권합니다. 국을 자주 끓이고 조림을 자주 한다면 16cm를 더하는 순서가 자연스럽습니다. 두 크기가 함께 있으면 요리에 맞춰 냄비를 바꾸는 일 없이 겨울 한 철을 지낼 수 있습니다.'] }
@@ -934,44 +1015,44 @@
         sign: '— HARU PICK 키친 노트', product: 'enamel'
       },
       j2: {
-        tag: 'CARE', date: '2026. 11. 05', read: '읽기 5분',
-        title: '도자기를 오래 쓰는 세척법',
-        hero: 'assets/collection2.jpg',
-        heroAlt: '무광 크림 도자기와 얼굴 화병으로 차린 겨울 식탁',
-        ex: '전자레인지와 식기세척기, 사용 전에 확인해야 할 세 가지만.',
-        lead: '도자기는 깨지기 쉬워서가 아니라 관리가 번거롭다고 생각해서 멀어지기 쉽습니다. 실제로 신경 쓸 것은 세 가지뿐입니다. 처음 한 번, 매일의 세척, 그리고 보관입니다.',
+        tag: 'CARE', date: '2026. 11. 08', read: '읽기 5분',
+        title: '무광 도자기를 오래 쓰는 법',
+        hero: 'assets/p_gratin.jpg',
+        heroAlt: '설백·자황·흑단 담음공방 온감 직사각 그라탕기 세 개',
+        ex: '오븐과 전자레인지, 식기세척기. 사용 전에 확인할 세 가지만.',
+        lead: '무광 도자기는 깨지기 쉬워서가 아니라 관리가 번거롭다고 생각해서 멀어지기 쉽습니다. 실제로 신경 쓸 것은 세 가지뿐입니다. 처음 한 번, 매일의 세척, 그리고 보관입니다.',
         body: [
-          { h: '첫날, 끓는 물에 한 번',
+          { h: '첫날, 미지근한 물에 한 번',
             p: ['새 그릇은 미지근한 물에 10분 담갔다가 끓는 물에 1~2분 데우는 것으로 시작합니다. 유약과 흙 사이에 남은 미세한 기포를 정리하는 과정입니다. 이후로는 급격한 온도 변화만 피하면 됩니다.',
                 '갓 데운 그릇에 찬물을 바로 붓거나, 냉동실에 두었던 그릇을 전자레인지에 넣는 것이 가장 흔한 파손 원인입니다. 겨울에는 실온과 수온의 차이가 커서 같은 실수가 반복됩니다.'] },
-          { h: '전자레인지와 식기세척기',
-            p: ['무광 도자기라도 금속 장식이 없는 제품이라면 전자레인지에 사용할 수 있습니다. 다만 금테·은테가 있는 그릇은 절대 넣지 마세요. 얇게 입혀진 금속 테두리에서는 스파크가 생깁니다.',
-                '식기세척기는 세제보다 물줄기의 압력이 문제입니다. 가장자리가 얇은 접시는 위쪽 칸에, 넓은 볼은 흔들리지 않게 고정해 주세요. 사용 전에는 제품 바닥의 표기를 한 번 확인하는 것이 가장 확실합니다.'] },
+          { h: '오븐과 전자레인지',
+            p: ['온감 그라탕기와 핸디보울은 오븐과 전자레인지에 사용할 수 있습니다. 다만 금속 장식이 붙은 그릇은 절대 넣지 마세요. 얇게 입혀진 금속 테두리에서는 스파크가 생깁니다.',
+                '오븐에서 꺼낸 그릇을 찬 조리대나 젖은 행주 위에 바로 내려놓지 마세요. 바닥의 온도 차가 유약에 금을 만듭니다. 나무 도마나 코스터 위에 두는 습관 하나로 몇 년이 달라집니다.'] },
           { h: '기름때는 뜨거운 물과 베이킹소다로',
             p: ['고기 기름이 굳은 그릇은 찬물에 바로 넣지 말고, 뜨거운 물에 베이킹소다를 한 스푼 풀어 10분 두었다가 부드러운 수세미로 닦습니다. 연마제가 든 수세미는 무광 유약의 결을 지워버리니 피하세요.',
                 '씻은 뒤에는 물기를 완전히 말립니다. 뒤집어 세워 두면 바닥에 물이 고여 얼룩이 남습니다. 행주로 한 번 훑고 통풍이 되는 곳에 엎어 두는 것으로 충분합니다.'] },
           { pull: '그릇은 씻는 방식보다, 씻고 나서 어떻게 두는지에 더 오래 영향을 받습니다.' },
           { h: '그래서, 오늘 저녁',
-            p: ['온감 14P처럼 매일 쓰는 세트는 한두 개가 아니라 열네 개가 함께 늙어갑니다. 조금씩 다르게 닳는 것이 무광 도자기의 성질이고, 그 차이가 몇 년 뒤에는 그 집의 식탁이 됩니다.'] }
+            p: ['온감처럼 매일 쓰는 그릇은 한두 개가 아니라 한 벌이 함께 늙어갑니다. 조금씩 다르게 닳는 것이 무광 도자기의 성질이고, 그 차이가 몇 년 뒤에는 그 집의 식탁이 됩니다.'] }
         ],
-        sign: '— HARU PICK 케어 노트', product: 'dameum'
+        sign: '— HARU PICK 케어 노트', product: 'gratin'
       },
       j3: {
         tag: 'TABLE', date: '2026. 10. 28', read: '읽기 4분',
         title: '화병 하나로 바꾸는 겨울 방',
-        hero: 'assets/collection2.jpg',
-        heroAlt: '무광 크림 도자기와 얼굴 화병으로 차린 겨울 식탁',
+        hero: 'assets/p_vase.jpg',
+        heroAlt: '둥근 몸에 눈·입과 두 팔 손잡이, 두 다리가 있는 크림색 도자기 화병에 흰 꽃을 꽂은 모습',
         ex: '생화가 아니어도 좋습니다. 드라이플라워와 어울리는 오브제 셋.',
         lead: '겨울 방은 조명만으로 채우기 어렵습니다. 창가에 두는 작은 오브제 하나가 방의 표정을 바꿉니다. 꽃을 사지 않아도 되는 화병 하나면 충분합니다.',
         body: [
           { h: '꽃이 없어도 되는 자리',
-            p: ['화병은 꽃을 담는 그릇이지만, 비어 있을 때의 모습이 더 자주 보입니다. 그래서 형태가 분명한 것이 좋습니다. 웃는 얼굴을 새긴 뷰티 화병은 꽃이 없어도 그 자체로 하나의 오브제가 됩니다.',
-                '높이는 창틀보다 조금 낮게 두세요. 창가에 두면 오후 햇살이 얼굴 위를 지나가고, 저녁에는 그림자가 벽에 생깁니다. 같은 물건이 시간에 따라 조금씩 다르게 보입니다.'] },
+            p: ['화병은 꽃을 담는 그릇이지만, 비어 있을 때의 모습이 더 자주 보입니다. 그래서 형태가 분명한 것이 좋습니다. 둥근 몸에 눈과 입을 새기고 양옆에 팔처럼 손잡이를 붙인 뷰티 화병은 꽃이 없어도 그 자체로 오브제가 됩니다.',
+                '높이는 창틀보다 조금 낮게 두세요. 창가에 두면 오후 햇살이 몸통을 지나가고, 저녁에는 그림자가 벽에 생깁니다. 같은 물건이 시간에 따라 조금씩 다르게 보입니다.'] },
           { h: '드라이플라워, 색보다 결',
             p: ['생화를 오래 두기 어려운 계절에는 드라이플라워가 좋습니다. 색이 강한 꽃보다 줄기와 잎의 결이 살아 있는 쪽이 도자기와 잘 어울립니다. 유칼립투스, 라그라스, 아마란서스처럼 마르면 형태가 남는 식물이 좋습니다.',
                 '한 줄기만 꽂아도 됩니다. 세 줄 이상 꽂으면 화병의 표정이 가려집니다. 물을 갈아줄 일이 없다는 것도 겨울에는 작은 장점입니다.'] },
-          { fig: { src: 'assets/p_vase.jpg', alt: '웃는 얼굴 모양의 크림색 도자기 화병에 흰 꽃을 꽂은 모습',
-                   cap: '웃는 얼굴의 화병은 꽃이 없을 때도 표정이 있습니다. 크림색이라 어두운 벽 앞에서도 튀지 않습니다.' } },
+          { fig: { src: 'assets/lb4.jpg', alt: '흰 꽃을 꽂은 크림색 도자기 화병', img: 'assets/lb4.jpg',
+                   cap: '꽃이 없을 때도 표정이 남습니다. 크림색이라 어두운 벽 앞에서도 튀지 않습니다.' } },
           { h: '한 자리에 하나만',
             p: ['오브제는 늘리는 것보다 자리를 정하는 일이 어렵습니다. 화병은 현관, 창가, 식탁 중 한 곳에만 두세요. 같은 방에 두 개를 두면 시선이 갈라지고, 어느 쪽도 주인공이 되지 못합니다.'] },
           { pull: '방을 바꾸는 것은 큰 가구가 아니라, 매일 눈이 가는 작은 자리 하나입니다.' },
@@ -987,42 +1068,43 @@
     var COL = {
       col1: {
         title: '법랑의 색',
-        hero: 'assets/collection1.jpg',
-        alt: '원목 조리대 위에 가지런히 놓인 파스텔 법랑 냄비 세 개',
-        lead: '불 앞에 서는 물건부터 식탁에 놓이는 물건까지, 같은 유약의 색으로 묶었습니다. 파스텔 네 색은 수납장 안에서도, 식탁 위에 그대로 올려도 어색하지 않습니다.',
-        note: '법랑은 쇠에 유약을 입혀 구워낸 소재입니다. 열을 고르게 전하고 냄새가 배지 않아 매일 쓰기에 좋습니다. 색이 바래지 않는 것도 법랑의 장점입니다.',
-        count: '3 ITEMS', tagline: 'HIMMEL ENAMEL', items: ['enamel', 'cut_essence', 'cut_house']
+        hero: 'assets/col_enamel.jpg',
+        alt: '힘멜 법랑사각 냄비와 커트러리 두 벌의 실제 상품 사진',
+        lead: '불 앞에 서는 물건부터 식탁에 놓이는 물건까지, 같은 유약의 색으로 묶었습니다. 힘멜의 법랑사각 냄비와 커트러리 두 벌, 세 가지입니다.',
+        note: '법랑은 쇠에 유약을 입혀 구워낸 소재입니다. 열을 고르게 전하고 냄새가 배지 않아 매일 쓰기에 좋습니다. 파스텔 네 색은 수납장 안에서도, 식탁 위에 그대로 올려도 어색하지 않습니다.',
+        count: '3 ITEMS', tagline: 'HIMMEL', items: ['enamel', 'cut_essence', 'cut_house']
       },
       col2: {
-        title: '테이블의 온도',
-        hero: 'assets/collection2.jpg',
-        alt: '무광 크림 도자기와 얼굴 화병으로 차린 겨울 식탁',
-        lead: '무광 도자기와 크림색 화병. 색을 낮추고 질감을 올리면 이인 식탁이 조금 더 조용해집니다.',
+        title: '온감의 그릇',
+        hero: 'assets/p_gratin.jpg',
+        alt: '설백·자황·흑단 담음공방 온감 직사각 그라탕기 세 개',
+        lead: '무광 도자기와 세 색의 접시, 그리고 크림색 화병. 색을 낮추고 질감을 올리면 이인 식탁이 조금 더 조용해집니다.',
         note: '무광 유약은 빛을 반사하지 않아 음식의 색이 도드라집니다. 대신 기름때가 남기 쉬워 뜨거운 물에 불려 씻는 편이 좋습니다.',
-        count: '2 ITEMS', tagline: 'DAMEUM · MOIN SHOP', items: ['dameum', 'vase']
+        count: '5 ITEMS', tagline: 'DAMEUM · POSEUL · MOIN',
+        items: ['dameum', 'gratin', 'handybowl', 'poseul', 'vase']
       }
     };
 
     /* ---------- 룩북 ---------- */
     var LB = [
-      { img: 'assets/hero-winter.jpg', alt: '아침 햇살이 드는 원목 식탁 위, 파스텔 컬러 법랑 냄비 네 개',
-        cap: '겨울 아침, 창가에 놓인 네 가지 색. 같은 유약이라 겹쳐 두어도 서로 부딪히지 않습니다.',
-        meta: 'STUDIO — 2026 WINTER', p: 'enamel' },
-      { img: 'assets/collection1.jpg', alt: '원목 조리대 위에 가지런히 놓인 파스텔 법랑 냄비 세 개',
-        cap: '노란빛이 도는 오후의 조리대. 불 앞에 두는 물건도 색을 가지런히 맞추면 공간의 일부가 됩니다.',
-        meta: 'STUDIO — COOKING', p: 'enamel' },
-      { img: 'assets/story.jpg', alt: '핑크색 법랑 냄비의 원목 뚜껑을 두 손으로 여는 모습',
-        cap: '뚜껑을 여는 순간, 김이 오르는 저녁. 원목 손잡이는 뜨거울 때도 손이 편합니다.',
-        meta: 'STUDIO — KITCHEN', p: 'enamel' },
-      { img: 'assets/collection2.jpg', alt: '무광 크림 도자기와 얼굴 화병으로 차린 겨울 식탁',
-        cap: '무광 그릇이 놓인 이인 식탁. 빛을 반사하지 않아 음식의 색이 먼저 보입니다.',
-        meta: 'STUDIO — TABLE', p: 'dameum' },
-      { img: 'assets/quote.jpg', alt: '세이지 그린과 옐로우 법랑 냄비, 무광 그릇에 담긴 저녁 상',
-        cap: '국과 나물, 겨울 상차림. 한 상에 올리는 그릇의 수를 줄이면 자리가 넓어집니다.',
-        meta: 'STUDIO — DINNER', p: 'dameum' },
-      { img: 'assets/p_vase.jpg', alt: '웃는 얼굴 모양의 크림색 도자기 화병에 흰 꽃을 꽂은 모습',
-        cap: '웃는 얼굴의 화병, 창틀 아래. 꽃이 없어도 표정이 남는 오브제입니다.',
-        meta: 'STUDIO — CORNER', p: 'vase' }
+      { img: 'assets/lb1.jpg', alt: '담음공방 온감 직사각 그라탕기 세 색에 담긴 요리',
+        cap: '설백에는 새우 그라탕, 흑단에는 감자 그라탕, 자황에는 조개 파스타. 세 색이 한 상에서 부딪히지 않습니다.',
+        meta: 'STUDIO — DINNER', p: 'gratin' },
+      { img: 'assets/lb2.jpg', alt: '원목 테이블 위 포슬 타원접시 세 색',
+        cap: '세 가지 색을 나란히. 같은 그릇도 색이 다르면 한 벌의 표정이 달라집니다.',
+        meta: 'STUDIO — COLOR', p: 'poseul' },
+      { img: 'assets/lb3.jpg', alt: '담음공방 온감 핸디보울 세 색과 파스타·그라탕',
+        cap: '한 손에 잡히는 볼. 오븐에서 꺼내 그대로 상에 올려도 손잡이가 뜨겁지 않게 잡힙니다.',
+        meta: 'STUDIO — TABLE', p: 'handybowl' },
+      { img: 'assets/lb4.jpg', alt: '크림색 모인샵 도자기 화병에 흰 꽃을 꽂은 모습',
+        cap: '둥근 몸과 두 팔. 꽃이 없어도 표정이 남는 오브제입니다.',
+        meta: 'STUDIO — CORNER', p: 'vase' },
+      { img: 'assets/lb5.jpg', alt: '리브 성형과 양손 손잡이가 보이는 그라탕기 확대 컷',
+        cap: '세로로 눌러 올린 리브와 양옆의 손잡이. 오븐 장갑 위에서도 잡히는 두께입니다.',
+        meta: 'STUDIO — DETAIL', p: 'gratin' },
+      { img: 'assets/lb6.jpg', alt: '갈색 테두리의 포슬 타원접시 확대 컷',
+        cap: '가장자리만 갈색으로 눌러, 색이 분명해도 접시가 가볍게 보입니다.',
+        meta: 'STUDIO — DETAIL', p: 'poseul' }
     ];
 
     /* ---------- DOM ---------- */
@@ -1043,7 +1125,7 @@
 
     /* ---------- 조각들 ---------- */
     function articleHTML(a) {
-      var h = '<div class="ed-hero"><img src="' + a.hero + '" alt="' + a.heroAlt + '"></div>';
+      var h = '<div class="ed-hero' + (a.heroSm ? ' sm' : '') + '"><img src="' + a.hero + '" alt="' + a.heroAlt + '"></div>';
       h += '<div class="ed">';
       h += '<div class="ed-meta"><span>' + a.tag + '</span><span>' + a.date + '</span><span>' + a.read + '</span></div>';
       h += '<p class="ed-lead">' + a.lead + '</p>';
@@ -1221,7 +1303,7 @@
     }
 
     function scrollToCard(k) {
-      var el = document.getElementById('card-' + k);
+      var el = document.getElementById('card-' + k) || document.getElementById('card-' + k + '2');
       if (!el) return;
       el.scrollIntoView({ behavior: 'smooth', block: 'center' });
       el.classList.add('flash');
