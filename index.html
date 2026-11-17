@@ -416,9 +416,6 @@
     .wrap{padding:0 40px}
     .topbar .opt{display:inline}
     .strip-extra{display:inline}
-    .hero-split{grid-template-columns:1fr 1fr;align-items:stretch}
-    .hs-copy{padding:52px 40px;order:-1}
-    .hs-media{aspect-ratio:auto}
     .cards{grid-template-columns:repeat(3,1fr);gap:34px 26px}
     .rail{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;overflow:visible;padding:0;margin:0}
     .rail .card{max-width:none;flex:none}
@@ -430,6 +427,13 @@
     .igrid{grid-template-columns:repeat(3,1fr)}
     .f-grid{grid-template-columns:2fr 1fr 1fr 1.4fr}
     .sec-head{grid-template-columns:1.1fr .9fr;align-items:end;gap:40px;margin-bottom:40px}
+  }
+
+  /* ---------- hero split (넓은 화면) ---------- */
+  @media (min-width:900px){
+    .hero-split{grid-template-columns:1fr 1fr;align-items:stretch}
+    .hs-copy{padding:52px 40px;order:-1}
+    .hs-media{aspect-ratio:auto}
   }
 
   /* ---------- desktop ---------- */
